@@ -1,0 +1,14 @@
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.csprojAssemblyReference.cache
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Form1.resources
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Properties.Resources.resources
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.csproj.GenerateResource.cache
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.csproj.CoreCompileInputs.cache
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\bin\Debug\Sistema_de_Nomina.exe.config
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\bin\Debug\Sistema_de_Nomina.exe
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\bin\Debug\Sistema_de_Nomina.pdb
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.exe
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.pdb
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.Vista.resources
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.FDepartamento.resources
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.DescuentosPorLey.resources
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.Form1.resources
