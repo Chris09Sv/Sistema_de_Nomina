@@ -17,7 +17,7 @@ namespace Sistema_de_Nomina.Datos
             {
 
             };
-            return Conexiones.ExecuteDataSet("store_Vista_Empleados", dbparams);
+            return Conexiones.ExecuteDataSet("store_Vista_Empleado", dbparams);
         }
         public static int Insertar(Empleados empleado)
         {
@@ -27,16 +27,24 @@ namespace Sistema_de_Nomina.Datos
                 Conexiones.MakeParam("@Nombre",SqlDbType.VarChar,0,empleado.Nombre),
                 Conexiones.MakeParam("@Apellido",SqlDbType.VarChar,0,empleado.Apellido),
                 Conexiones.MakeParam("@Direccion",SqlDbType.VarChar,0,empleado.Direccion),
+              Conexiones.MakeParam("@Telefono",SqlDbType.VarChar,0,empleado.Telefono),
+
                 Conexiones.MakeParam("@Email",SqlDbType.VarChar,0,empleado.Email),
-                Conexiones.MakeParam("@Telefono",SqlDbType.VarChar,0,empleado.Telefono),
                 Conexiones.MakeParam("@Fecha_de_Nacimiento",SqlDbType.Date,0,empleado.FechaDeNacimiento),
-                Conexiones.MakeParam("@Fecha_de_Contratacion",SqlDbType.Date,0,empleado.FechaDeContratacion),
-                Conexiones.MakeParam("@Departamento",SqlDbType.VarChar,0,empleado.Departamento),
-                Conexiones.MakeParam("@Puesto",SqlDbType.VarChar,0,empleado.Puesto)
+                 Conexiones.MakeParam("@Estado_Civil",SqlDbType.VarChar,0,empleado.EstadoCivil),
+
+                Conexiones.MakeParam("@Fecha_de_Ingreso",SqlDbType.Date,0,empleado.FechaDeContratacion),
+                                Conexiones.MakeParam("@IdPuesto",SqlDbType.Int,0,empleado.IdPuesto),
+
+               Conexiones.MakeParam("@Salario",SqlDbType.Decimal,0,empleado.Sueldo),
+                              Conexiones.MakeParam("@Estado",SqlDbType.VarChar,0,empleado.Estado),
+                                 Conexiones.MakeParam("@NoCuenta",SqlDbType.VarChar,0,empleado.NoCuenta)
+
+
 
 
             };
-            return Convert.ToInt32(Conexiones.ExecuteScalar("InsertarEmpleado", dbParametro));
+            return Convert.ToInt32(Conexiones.ExecuteScalar("store_Nuevo_Empleado", dbParametro));
         }
 
         public static int Modificar(Empleados empleado)
@@ -45,20 +53,36 @@ namespace Sistema_de_Nomina.Datos
             {
                                 Conexiones.MakeParam("@Id",SqlDbType.Int,0,empleado.Id),
 
-                Conexiones.MakeParam("@Cedula",SqlDbType.VarChar,0,empleado.Cedula),
+                        Conexiones.MakeParam("@Cedula",SqlDbType.VarChar,0,empleado.Cedula),
                 Conexiones.MakeParam("@Nombre",SqlDbType.VarChar,0,empleado.Nombre),
                 Conexiones.MakeParam("@Apellido",SqlDbType.VarChar,0,empleado.Apellido),
                 Conexiones.MakeParam("@Direccion",SqlDbType.VarChar,0,empleado.Direccion),
-                Conexiones.MakeParam("@Email",SqlDbType.VarChar,0,empleado.Email),
-                Conexiones.MakeParam("@Telefono",SqlDbType.VarChar,0,empleado.Telefono),
-                Conexiones.MakeParam("@Fecha_de_Nacimiento",SqlDbType.Date,0,empleado.FechaDeNacimiento),
-                Conexiones.MakeParam("@Fecha_de_Contratacion",SqlDbType.Date,0,empleado.FechaDeContratacion),
-                Conexiones.MakeParam("@Departamento",SqlDbType.VarChar,0,empleado.Departamento),
-                Conexiones.MakeParam("@Puesto",SqlDbType.VarChar,0,empleado.Puesto)
+              Conexiones.MakeParam("@Telefono",SqlDbType.VarChar,0,empleado.Telefono),
 
+                Conexiones.MakeParam("@Email",SqlDbType.VarChar,0,empleado.Email),
+                Conexiones.MakeParam("@Fecha_de_Nacimiento",SqlDbType.Date,0,empleado.FechaDeNacimiento),
+                Conexiones.MakeParam("@Estado_Civil",SqlDbType.VarChar,0,empleado.EstadoCivil),
+
+               Conexiones.MakeParam("@Fecha_de_Ingreso",SqlDbType.Date,0,empleado.FechaDeContratacion),
+               Conexiones.MakeParam("@IdPuesto",SqlDbType.Int,0,empleado.IdPuesto),
+
+               Conexiones.MakeParam("@Salario",SqlDbType.Decimal,0,empleado.Sueldo),
+               Conexiones.MakeParam("@NoCuenta",SqlDbType.VarChar,0,empleado.NoCuenta)
 
             };
-            return Convert.ToInt32(Conexiones.ExecuteScalar("store_Modificar_Empleados", dbParametro));
+            return Convert.ToInt32(Conexiones.ExecuteScalar("store_Modificar_Empleado", dbParametro));
+        }
+
+
+        public static int Eliminar(Empleados empleado)
+        {
+            SqlParameter[] dbParametro = new SqlParameter[]
+            {
+                                                Conexiones.MakeParam("@Id",SqlDbType.Int,0,empleado.Id),
+
+            };
+
+            return Convert.ToInt32(Conexiones.ExecuteScalar("store_Eliminar_Empleado", dbParametro));
         }
 
     }

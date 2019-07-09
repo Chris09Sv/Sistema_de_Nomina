@@ -9,6 +9,10 @@ C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\bin\
 C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.exe
 C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.pdb
 C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.Vista.resources
-C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.FDepartamento.resources
 C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.DescuentosPorLey.resources
-C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.Form1.resources
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.MantenimientoDepartamento.resources
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.MantenimientoEmpleado.resources
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.MenuPrincipal.resources
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.MantenimientoEmpleado_Editar.resources
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.Mantenimiento_de__nomina.resources
+C:\Users\Cristopher Solano\source\repos\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.Tasa_de_Deducciones.resources

@@ -46,7 +46,7 @@ namespace Sistema_de_Nomina
             ep.FechaDeNacimiento = T_FechaDeNacimiento.Value;
             ep.FechaDeContratacion = T_FechaDeContratacion.Value;
             ep.Puesto = T_Puesto.Text;
-            ep.Departamento = T_Departamento.Text;
+          //  ep.Departamento = T_Departamento.Text;
           //  ep.Sueldo = Convert.ToByte(T_Sueldo.Text);
 
             if (PEmpleados.Insertar(ep) > 0)

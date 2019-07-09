@@ -22,6 +22,29 @@ namespace Sistema_de_Nomina.Datos
                
 
         }
+
+        public static DataSet VistaPosicion()
+        {
+            SqlParameter[] dbparametro = new SqlParameter[]
+            {
+
+            };
+            return Conexiones.ExecuteDataSet("store_Vista_Posicion", dbparametro);
+
+
+        }
+
+        public static DataSet VistaDePuestos()
+        {
+            SqlParameter[] dbparametro = new SqlParameter[]
+            {
+
+            };
+            return Conexiones.ExecuteDataSet("store_Vista_Puestos", dbparametro);
+
+
+        }
+
         public static int NuevoDepartamento(Departamentos dept)
         {
             SqlParameter[] dbparametro = new SqlParameter[]
@@ -31,6 +54,20 @@ namespace Sistema_de_Nomina.Datos
 
             };
             return Convert.ToInt32(Conexiones.ExecuteScalar("store_Nuevo_Departamento", dbparametro));
+        }
+        public static int ActualizarDepartamento(Departamentos dept)
+        {
+            SqlParameter[] dbparametro = new SqlParameter[]
+          {
+                Conexiones.MakeParam("@Id",SqlDbType.Int,0,dept.Id),
+
+                Conexiones.MakeParam("@Departamento",SqlDbType.VarChar,0,dept.Departamento)
+
+
+          };
+            return Convert.ToInt32(Conexiones.ExecuteScalar("store_Actualizar_Departamento", dbparametro));
+
+
         }
 
         public static int NuevaPosicion(Posiciones posiciones)
@@ -45,6 +82,34 @@ namespace Sistema_de_Nomina.Datos
 
             };
             return Convert.ToInt32(Conexiones.ExecuteScalar("store_Nueva_Posicion", dbparametro));
+        }
+        public static int ActualizarPosicion(Posiciones posiciones)
+        {
+            SqlParameter[] dbparametro = new SqlParameter[]
+          {
+              Conexiones.MakeParam("@Id",SqlDbType.Int,0,posiciones.Id),
+
+                Conexiones.MakeParam("@Posicion",SqlDbType.VarChar,0,posiciones.Posicion),
+
+                Conexiones.MakeParam("@IdDepartamento",SqlDbType.Int,0,posiciones.IdDepartamento)
+
+
+            };
+            return Convert.ToInt32(Conexiones.ExecuteScalar("store_Actualizar_Posicion", dbparametro));
+
+
+        }
+        
+
+        public static int EliminarPosicion(Posiciones posiciones)
+        {
+            SqlParameter[] dbParametro = new SqlParameter[]
+            {
+             Conexiones.MakeParam("@Id",SqlDbType.Int,0,posiciones.Id)
+
+            };
+
+            return Convert.ToInt32(Conexiones.ExecuteScalar("store_Eliminar_Posicion", dbParametro));
         }
     }
 }

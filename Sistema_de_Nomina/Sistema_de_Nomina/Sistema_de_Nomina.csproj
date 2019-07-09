@@ -51,6 +51,7 @@
     <Compile Include="Datos\Conexiones.cs" />
     <Compile Include="Datos\PEmpleados.cs" />
     <Compile Include="Datos\ProDepartamento.cs" />
+    <Compile Include="Datos\ProNomina.cs" />
     <Compile Include="ModeloDeDatos\Departamentos.cs" />
     <Compile Include="ModeloDeDatos\Posiciones.cs" />
     <Compile Include="Presentacion\DescuentosPorLey.cs">
@@ -59,12 +60,6 @@
     <Compile Include="Presentacion\DescuentosPorLey.Designer.cs">
       <DependentUpon>DescuentosPorLey.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FDepartamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\FDepartamento.Designer.cs">
-      <DependentUpon>FDepartamento.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentacion\FEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,11 +67,41 @@
       <DependentUpon>FEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="ModeloDeDatos\Empleados.cs" />
-    <Compile Include="Presentacion\Form1.cs">
+    <Compile Include="Presentacion\Mantenimiento de  nomina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Presentacion\Mantenimiento de  nomina.Designer.cs">
+      <DependentUpon>Mantenimiento de  nomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoDepartamento.Designer.cs">
+      <DependentUpon>MantenimientoDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoEmpleado.Designer.cs">
+      <DependentUpon>MantenimientoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoEmpleado_Editar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoEmpleado_Editar.Designer.cs">
+      <DependentUpon>MantenimientoEmpleado_Editar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Tasa de Deducciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Tasa de Deducciones.Designer.cs">
+      <DependentUpon>Tasa de Deducciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Vista.cs">
       <SubType>Form</SubType>
@@ -89,14 +114,26 @@
     <EmbeddedResource Include="Presentacion\DescuentosPorLey.resx">
       <DependentUpon>DescuentosPorLey.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FDepartamento.resx">
-      <DependentUpon>FDepartamento.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FEmpleado.resx">
       <DependentUpon>FEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Mantenimiento de  nomina.resx">
+      <DependentUpon>Mantenimiento de  nomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MantenimientoDepartamento.resx">
+      <DependentUpon>MantenimientoDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MantenimientoEmpleado.resx">
+      <DependentUpon>MantenimientoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MantenimientoEmpleado_Editar.resx">
+      <DependentUpon>MantenimientoEmpleado_Editar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Tasa de Deducciones.resx">
+      <DependentUpon>Tasa de Deducciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Vista.resx">
       <DependentUpon>Vista.cs</DependentUpon>
