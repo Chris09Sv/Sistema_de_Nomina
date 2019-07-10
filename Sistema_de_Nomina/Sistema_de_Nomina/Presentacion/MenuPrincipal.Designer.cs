@@ -59,11 +59,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(148, 35);
+            this.label1.Location = new System.Drawing.Point(101, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(470, 18);
+            this.label1.Size = new System.Drawing.Size(593, 18);
             this.label1.TabIndex = 3;
-            this.label1.Text = "SISTEMA DE NOMINA DE LOS ROCKIES DE COLORADO";
+            this.label1.Text = "SISTEMA DE NOMINA DE LA ACADEMIA DE COLORADO ROCKIES RD";
             // 
             // menuStrip1
             // 
@@ -86,27 +86,27 @@
             this.dEPARTAMENTOToolStripMenuItem,
             this.uSUARIOToolStripMenuItem});
             this.rEGISTROToolStripMenuItem.Name = "rEGISTROToolStripMenuItem";
-            this.rEGISTROToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.rEGISTROToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.rEGISTROToolStripMenuItem.Text = "REGISTRO";
             // 
             // eMPLEADOToolStripMenuItem
             // 
             this.eMPLEADOToolStripMenuItem.Name = "eMPLEADOToolStripMenuItem";
-            this.eMPLEADOToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.eMPLEADOToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.eMPLEADOToolStripMenuItem.Text = "EMPLEADO";
             this.eMPLEADOToolStripMenuItem.Click += new System.EventHandler(this.EMPLEADOToolStripMenuItem_Click);
             // 
             // dEPARTAMENTOToolStripMenuItem
             // 
             this.dEPARTAMENTOToolStripMenuItem.Name = "dEPARTAMENTOToolStripMenuItem";
-            this.dEPARTAMENTOToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.dEPARTAMENTOToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.dEPARTAMENTOToolStripMenuItem.Text = "DEPARTAMENTO";
             this.dEPARTAMENTOToolStripMenuItem.Click += new System.EventHandler(this.DEPARTAMENTOToolStripMenuItem_Click);
             // 
             // uSUARIOToolStripMenuItem
             // 
             this.uSUARIOToolStripMenuItem.Name = "uSUARIOToolStripMenuItem";
-            this.uSUARIOToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.uSUARIOToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.uSUARIOToolStripMenuItem.Text = "USUARIO";
             // 
             // nOMINAToolStripMenuItem
@@ -121,20 +121,20 @@
             // nOMINADEPAGOToolStripMenuItem
             // 
             this.nOMINADEPAGOToolStripMenuItem.Name = "nOMINADEPAGOToolStripMenuItem";
-            this.nOMINADEPAGOToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.nOMINADEPAGOToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.nOMINADEPAGOToolStripMenuItem.Text = "NOMINA DE PAGO";
             this.nOMINADEPAGOToolStripMenuItem.Click += new System.EventHandler(this.NOMINADEPAGOToolStripMenuItem_Click);
             // 
             // hISTORIALDENOMINAToolStripMenuItem
             // 
             this.hISTORIALDENOMINAToolStripMenuItem.Name = "hISTORIALDENOMINAToolStripMenuItem";
-            this.hISTORIALDENOMINAToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.hISTORIALDENOMINAToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.hISTORIALDENOMINAToolStripMenuItem.Text = "HISTORIAL DE NOMINA";
             // 
             // tASADEDEDUCIONESToolStripMenuItem
             // 
             this.tASADEDEDUCIONESToolStripMenuItem.Name = "tASADEDEDUCIONESToolStripMenuItem";
-            this.tASADEDEDUCIONESToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
+            this.tASADEDEDUCIONESToolStripMenuItem.Size = new System.Drawing.Size(138, 20);
             this.tASADEDEDUCIONESToolStripMenuItem.Text = "TASA DE DEDUCIONES";
             // 
             // sALIRToolStripMenuItem

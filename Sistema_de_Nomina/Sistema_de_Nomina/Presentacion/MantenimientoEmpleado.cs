@@ -126,7 +126,7 @@ namespace Sistema_de_Nomina.Presentacion
             {
 
                 //Txt_ID.Text = dgvProductos.CurrentRow.Cells["Id"].Value.ToString();
-                lbl_id.Text= dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+               // lbl_id.Text= dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                 T_Nombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
                 T_Apellido.Text = dataGridView1.CurrentRow.Cells["Apellido"].Value.ToString();
                 T_Cedula.Text = dataGridView1.CurrentRow.Cells["Cedula"].Value.ToString();
@@ -214,7 +214,7 @@ namespace Sistema_de_Nomina.Presentacion
             try
             {
                 DataView dv = new DataView(dt.Copy());
-                dv.RowFilter = comboBox1.Text + " Like '" + T_Buscar.Text + "%'";
+                dv.RowFilter = comboBox1.Text + " Like '%" + T_Buscar.Text + "%'";
                 dataGridView1.DataSource = dv;
             }
             catch

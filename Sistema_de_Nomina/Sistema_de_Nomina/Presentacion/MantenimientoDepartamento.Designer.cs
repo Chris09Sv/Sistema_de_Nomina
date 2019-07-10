@@ -345,6 +345,8 @@
             // 
             // C_FiltroP
             // 
+            this.C_FiltroP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.C_FiltroP.Enabled = false;
             this.C_FiltroP.FormattingEnabled = true;
             this.C_FiltroP.Items.AddRange(new object[] {
             "Puestos",
@@ -353,7 +355,6 @@
             this.C_FiltroP.Name = "C_FiltroP";
             this.C_FiltroP.Size = new System.Drawing.Size(121, 21);
             this.C_FiltroP.TabIndex = 21;
-            this.C_FiltroP.Text = "Departamentos";
             // 
             // T_Buscar_Posicion
             // 

@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\Conexiones.cs" />
+    <Compile Include="ModeloDeDatos\Nomina.cs" />
     <Compile Include="Datos\PEmpleados.cs" />
     <Compile Include="Datos\ProDepartamento.cs" />
     <Compile Include="Datos\ProNomina.cs" />
@@ -67,6 +68,12 @@
       <DependentUpon>FEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="ModeloDeDatos\Empleados.cs" />
+    <Compile Include="Presentacion\Frm_Nomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Frm_Nomina.Designer.cs">
+      <DependentUpon>Frm_Nomina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Mantenimiento de  nomina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,13 +116,16 @@
     <Compile Include="Presentacion\Vista.Designer.cs">
       <DependentUpon>Vista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Presentacion\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentacion\DescuentosPorLey.resx">
       <DependentUpon>DescuentosPorLey.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FEmpleado.resx">
       <DependentUpon>FEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Frm_Nomina.resx">
+      <DependentUpon>Frm_Nomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Mantenimiento de  nomina.resx">
       <DependentUpon>Mantenimiento de  nomina.cs</DependentUpon>

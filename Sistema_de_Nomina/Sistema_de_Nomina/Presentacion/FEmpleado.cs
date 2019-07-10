@@ -36,7 +36,7 @@ namespace Sistema_de_Nomina
 
         private void B_Guardar_Click(object sender, EventArgs e)
         {
-            Empleados ep = new Empleados();
+             Empleados ep = new Empleados();
             ep.Nombre = T_Nombre.Text;
             ep.Apellido = T_Apellido.Text;
             ep.Cedula = T_Cedula.Text;

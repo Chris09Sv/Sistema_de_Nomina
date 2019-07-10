@@ -241,7 +241,7 @@
             // 
             // T_FechaDeNacimiento
             // 
-            this.T_FechaDeNacimiento.Location = new System.Drawing.Point(146, 223);
+            this.T_FechaDeNacimiento.Location = new System.Drawing.Point(128, 226);
             this.T_FechaDeNacimiento.Name = "T_FechaDeNacimiento";
             this.T_FechaDeNacimiento.Size = new System.Drawing.Size(200, 20);
             this.T_FechaDeNacimiento.TabIndex = 24;

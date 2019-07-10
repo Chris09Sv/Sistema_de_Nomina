@@ -21,5 +21,25 @@ namespace Sistema_de_Nomina.Presentacion
         {
 
         }
+
+        private void B_Nuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void B_Buscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void B_Cancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void C_EstadoCivil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

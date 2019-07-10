@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.G_Empleado = new System.Windows.Forms.GroupBox();
+            this.C_EstadoCivil = new System.Windows.Forms.ComboBox();
             this.T_NoCuenta = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.lbl_id = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.T_Correo = new System.Windows.Forms.TextBox();
             this.T_Apellido = new System.Windows.Forms.TextBox();
             this.T_Salario = new System.Windows.Forms.TextBox();
-            this.T_EstadoCivil = new System.Windows.Forms.TextBox();
             this.T_Telefono = new System.Windows.Forms.TextBox();
             this.T_Cedula = new System.Windows.Forms.TextBox();
             this.T_Nombre = new System.Windows.Forms.TextBox();
@@ -65,6 +65,7 @@
             // 
             // G_Empleado
             // 
+            this.G_Empleado.Controls.Add(this.C_EstadoCivil);
             this.G_Empleado.Controls.Add(this.T_NoCuenta);
             this.G_Empleado.Controls.Add(this.label14);
             this.G_Empleado.Controls.Add(this.lbl_id);
@@ -80,7 +81,6 @@
             this.G_Empleado.Controls.Add(this.T_Correo);
             this.G_Empleado.Controls.Add(this.T_Apellido);
             this.G_Empleado.Controls.Add(this.T_Salario);
-            this.G_Empleado.Controls.Add(this.T_EstadoCivil);
             this.G_Empleado.Controls.Add(this.T_Telefono);
             this.G_Empleado.Controls.Add(this.T_Cedula);
             this.G_Empleado.Controls.Add(this.T_Nombre);
@@ -96,12 +96,24 @@
             this.G_Empleado.Controls.Add(this.label5);
             this.G_Empleado.Controls.Add(this.label3);
             this.G_Empleado.Controls.Add(this.label2);
-            this.G_Empleado.Location = new System.Drawing.Point(1, 24);
+            this.G_Empleado.Location = new System.Drawing.Point(1, 28);
             this.G_Empleado.Name = "G_Empleado";
-            this.G_Empleado.Size = new System.Drawing.Size(798, 429);
+            this.G_Empleado.Size = new System.Drawing.Size(787, 425);
             this.G_Empleado.TabIndex = 1;
             this.G_Empleado.TabStop = false;
-            this.G_Empleado.Text = "MantenimientoEmpleado";
+            this.G_Empleado.Text = " ";
+            // 
+            // C_EstadoCivil
+            // 
+            this.C_EstadoCivil.FormattingEnabled = true;
+            this.C_EstadoCivil.Items.AddRange(new object[] {
+            "SOLTERO",
+            "CASADO"});
+            this.C_EstadoCivil.Location = new System.Drawing.Point(168, 149);
+            this.C_EstadoCivil.Name = "C_EstadoCivil";
+            this.C_EstadoCivil.Size = new System.Drawing.Size(121, 21);
+            this.C_EstadoCivil.TabIndex = 63;
+            this.C_EstadoCivil.SelectedIndexChanged += new System.EventHandler(this.C_EstadoCivil_SelectedIndexChanged);
             // 
             // T_NoCuenta
             // 
@@ -152,6 +164,7 @@
             this.B_Cancelar.TabIndex = 56;
             this.B_Cancelar.Text = "Cancelar";
             this.B_Cancelar.UseVisualStyleBackColor = true;
+            this.B_Cancelar.Click += new System.EventHandler(this.B_Cancelar_Click);
             // 
             // B_Buscar
             // 
@@ -161,6 +174,7 @@
             this.B_Buscar.TabIndex = 55;
             this.B_Buscar.Text = "Buscar";
             this.B_Buscar.UseVisualStyleBackColor = true;
+            this.B_Buscar.Click += new System.EventHandler(this.B_Buscar_Click);
             // 
             // B_Guardar
             // 
@@ -179,6 +193,7 @@
             this.B_Nuevo.TabIndex = 53;
             this.B_Nuevo.Text = "Nuevo";
             this.B_Nuevo.UseVisualStyleBackColor = true;
+            this.B_Nuevo.Click += new System.EventHandler(this.B_Nuevo_Click);
             // 
             // DTP_FechaNacimiento
             // 
@@ -223,13 +238,6 @@
             this.T_Salario.Name = "T_Salario";
             this.T_Salario.Size = new System.Drawing.Size(100, 20);
             this.T_Salario.TabIndex = 45;
-            // 
-            // T_EstadoCivil
-            // 
-            this.T_EstadoCivil.Location = new System.Drawing.Point(168, 153);
-            this.T_EstadoCivil.Name = "T_EstadoCivil";
-            this.T_EstadoCivil.Size = new System.Drawing.Size(100, 20);
-            this.T_EstadoCivil.TabIndex = 44;
             // 
             // T_Telefono
             // 
@@ -405,7 +413,6 @@
         private System.Windows.Forms.TextBox T_Correo;
         private System.Windows.Forms.TextBox T_Apellido;
         private System.Windows.Forms.TextBox T_Salario;
-        private System.Windows.Forms.TextBox T_EstadoCivil;
         private System.Windows.Forms.TextBox T_Telefono;
         private System.Windows.Forms.TextBox T_Cedula;
         private System.Windows.Forms.TextBox T_Nombre;
@@ -421,5 +428,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox C_EstadoCivil;
     }
 }
