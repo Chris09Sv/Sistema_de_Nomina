@@ -54,3 +54,23 @@ D:\system\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug
 D:\system\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.csproj.CoreCompileInputs.cache
 D:\system\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.exe
 D:\system\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.pdb
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\bin\Debug\Sistema_de_Nomina.exe.config
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\bin\Debug\Sistema_de_Nomina.exe
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\bin\Debug\Sistema_de_Nomina.pdb
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.csprojAssemblyReference.cache
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.DescuentosPorLey.resources
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.Frm_Nomina.resources
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.Mantenimiento_de__nomina.resources
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.MantenimientoDepartamento.resources
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.MantenimientoEmpleado.resources
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.MantenimientoEmpleado_Editar.resources
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.MenuPrincipal.resources
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.Tasa_de_Deducciones.resources
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.Vista.resources
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Properties.Resources.resources
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.csproj.GenerateResource.cache
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.csproj.CoreCompileInputs.cache
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.exe
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.pdb
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.BusquedaNomina.resources
+C:\Users\Cristopher Solano\Downloads\Sistema_de_Nomina-master\Sistema_de_Nomina-master\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.CalculoPrestaciones.resources

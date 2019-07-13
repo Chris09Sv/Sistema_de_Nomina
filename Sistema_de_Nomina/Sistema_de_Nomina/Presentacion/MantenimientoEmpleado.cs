@@ -66,37 +66,49 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void B_Guardar_Click(object sender, EventArgs e)
         {
-            Empleados empleados = new Empleados();
-          //  empleados.Id;
-            empleados.Nombre=T_Nombre.Text;
-            empleados.Apellido=T_Apellido.Text;
-            empleados.Cedula=T_Cedula.Text;
-            empleados.Direccion=T_Direccion.Text;
-            empleados.Email=T_Correo.Text;
-            empleados.Telefono=T_Telefono.Text;
-           empleados.IdPuesto=Convert.ToInt32(C_Puesto.SelectedValue.ToString());
-            empleados.FechaDeNacimiento = DTP_FechaNacimiento.Value;
-            empleados.FechaDeContratacion= DTP_FechaIngreso.Value;
-            empleados.Sueldo = Convert.ToDecimal(T_Salario.Text);
-            empleados.EstadoCivil = T_EstadoCivil.Text;
-            empleados.Estado=T_Status.Text;
-            empleados.NoCuenta =Convert.ToInt32(T_NoCuenta.Text);
+          
 
-            if (lbl_id.Text == "")
+            if (T_Nombre.Text == "" || T_Apellido.Text == "" || T_Cedula.Text == "" || T_Direccion.Text == "" || T_Telefono.Text == "")
             {
-                if (PEmpleados.Insertar(empleados) > 0)
-                {
-                    MessageBox.Show("Empleado registrado correctamente");
-                }
+                MessageBox.Show("Complete los datos antes de continuar.");
             }
             else
             {
-                empleados.Id = Convert.ToInt32(lbl_id.Text);
+                Empleados empleados = new Empleados();
+                //  empleados.Id;
+                empleados.Nombre = T_Nombre.Text;
+                empleados.Apellido = T_Apellido.Text;
+                empleados.Cedula = T_Cedula.Text;
+                empleados.Direccion = T_Direccion.Text;
+                empleados.Email = T_Correo.Text;
+                empleados.Telefono = T_Telefono.Text;
+                empleados.IdPuesto = Convert.ToInt32(C_Puesto.SelectedValue.ToString());
+                empleados.FechaDeNacimiento = DTP_FechaNacimiento.Value;
+                empleados.FechaDeContratacion = DTP_FechaIngreso.Value;
+                empleados.Sueldo = Convert.ToDecimal(T_Salario.Text);
+                empleados.EstadoCivil = T_EstadoCivil.Text;
+                empleados.Estado = T_Status.Text;
+                empleados.NoCuenta = Convert.ToInt32(T_NoCuenta.Text);
 
-                if (PEmpleados.Modificar(empleados) == 1)
+                if (lbl_id.Text == "")
                 {
-                    MessageBox.Show("Empleado modificado Correctamente");
+                    if (PEmpleados.Insertar(empleados) > 0)
+                    {
+                        MessageBox.Show("Empleado registrado correctamente");
+                        Limpiar();
+                    }
                 }
+                else
+                {
+                    empleados.Id = Convert.ToInt32(lbl_id.Text);
+
+                    if (PEmpleados.Modificar(empleados) == 1)
+                    {
+                        MessageBox.Show("Empleado modificado Correctamente");
+                    }
+                }
+
+
             }
 
         }
@@ -180,6 +192,8 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void MantenimientoEmpleado_Load(object sender, EventArgs e)
         {
+            T_NoCuenta.Text = "0";
+            T_Salario.Text = "0";
             try
             {
                 DataSet ds = ProDepartamento.VistaDePuestos();
@@ -221,6 +235,47 @@ namespace Sistema_de_Nomina.Presentacion
             {
 
             }
+        }
+
+        private void T_Apellido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void T_Correo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void G_Empleado_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void B_Nuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
+        private  void Limpiar()
+        {
+            T_Nombre.Text = "";
+            T_Apellido.Text="";
+             T_Cedula.Text="";
+             T_Direccion.Text="";
+             T_Correo.Text="";
+             T_Telefono.Text="";
+            //  Convert.ToInt32(C_Puesto.SelectedValue.ToString());
+
+            T_Salario.Text = "";
+
+            T_NoCuenta.Text="";
         }
     }
 }

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.P_Adm_Departamento = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.T_Id = new System.Windows.Forms.Label();
             this.B_Cancelar = new System.Windows.Forms.Button();
             this.B_Guardar = new System.Windows.Forms.Button();
@@ -60,6 +58,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.DvgPosiciones = new System.Windows.Forms.DataGridView();
             this.Eliminar1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.button4 = new System.Windows.Forms.Button();
             this.P_Adm_Departamento.SuspendLayout();
             this.P_Posicion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvDept)).BeginInit();
@@ -72,8 +71,6 @@
             // P_Adm_Departamento
             // 
             this.P_Adm_Departamento.BackColor = System.Drawing.Color.White;
-            this.P_Adm_Departamento.Controls.Add(this.button3);
-            this.P_Adm_Departamento.Controls.Add(this.button2);
             this.P_Adm_Departamento.Controls.Add(this.T_Id);
             this.P_Adm_Departamento.Controls.Add(this.B_Cancelar);
             this.P_Adm_Departamento.Controls.Add(this.B_Guardar);
@@ -84,26 +81,6 @@
             this.P_Adm_Departamento.Size = new System.Drawing.Size(300, 492);
             this.P_Adm_Departamento.TabIndex = 8;
             this.P_Adm_Departamento.Paint += new System.Windows.Forms.PaintEventHandler(this.P_Adm_Departamento_Paint);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(175, 456);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Nuevo";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(17, 456);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // T_Id
             // 
@@ -116,16 +93,17 @@
             // 
             // B_Cancelar
             // 
-            this.B_Cancelar.Location = new System.Drawing.Point(175, 419);
+            this.B_Cancelar.Location = new System.Drawing.Point(176, 427);
             this.B_Cancelar.Name = "B_Cancelar";
             this.B_Cancelar.Size = new System.Drawing.Size(104, 23);
             this.B_Cancelar.TabIndex = 13;
             this.B_Cancelar.Text = "Cancelar";
             this.B_Cancelar.UseVisualStyleBackColor = true;
+            this.B_Cancelar.Click += new System.EventHandler(this.B_Cancelar_Click);
             // 
             // B_Guardar
             // 
-            this.B_Guardar.Location = new System.Drawing.Point(17, 419);
+            this.B_Guardar.Location = new System.Drawing.Point(18, 427);
             this.B_Guardar.Name = "B_Guardar";
             this.B_Guardar.Size = new System.Drawing.Size(104, 23);
             this.B_Guardar.TabIndex = 12;
@@ -332,6 +310,7 @@
             // 
             // G_Posiciones
             // 
+            this.G_Posiciones.Controls.Add(this.button4);
             this.G_Posiciones.Controls.Add(this.C_FiltroP);
             this.G_Posiciones.Controls.Add(this.T_Buscar_Posicion);
             this.G_Posiciones.Controls.Add(this.button1);
@@ -366,7 +345,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(60, 419);
+            this.button1.Location = new System.Drawing.Point(60, 427);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 23);
             this.button1.TabIndex = 19;
@@ -397,6 +376,16 @@
             this.Eliminar1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Eliminar1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(235, 427);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(95, 23);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Editar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            // 
             // MantenimientoDepartamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,10 +394,10 @@
             this.ClientSize = new System.Drawing.Size(724, 549);
             this.ControlBox = false;
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.P_Posicion);
             this.Controls.Add(this.P_Adm_Departamento);
             this.Controls.Add(this.G_Posiciones);
             this.Controls.Add(this.G_Dept);
+            this.Controls.Add(this.P_Posicion);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MantenimientoDepartamento";
             this.Text = "MantenimientoDepartamento";
@@ -456,12 +445,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView DvgPosiciones;
         private System.Windows.Forms.Button B_EditarPosicion;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox T_Buscar_Posicion;
         private System.Windows.Forms.ComboBox C_FiltroP;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar1;
+        private System.Windows.Forms.Button button4;
     }
 }

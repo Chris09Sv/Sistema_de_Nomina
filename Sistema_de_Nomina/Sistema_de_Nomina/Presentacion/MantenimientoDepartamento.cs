@@ -278,8 +278,12 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void B_EditarPosicion_Click(object sender, EventArgs e)
         {
-            DvgPosiciones.Enabled = true;
-
+            if (DgvDept.CurrentRow != null)
+            {
+                T_Id.Text = DgvDept.CurrentRow.Cells[1].Value.ToString();
+                T_Departamento.Text = DgvDept.CurrentRow.Cells[2].Value.ToString();
+                //T_Departamento.Enabled = false;
+            }
         }
 
         private void B_NuevaPosicion_Click(object sender, EventArgs e)
@@ -290,16 +294,7 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void DvgPosiciones_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (DvgPosiciones.CurrentRow != null)
-            {
-                T_IDPuesto.Text = DvgPosiciones.CurrentRow.Cells["Id"].Value.ToString();
-                T_Posicion.Text = DvgPosiciones.CurrentRow.Cells["Puestos"].Value.ToString();
-                //T_Departamento.Enabled = false;
-                //    C_Departamento.DisplayMember = DvgPosiciones.CurrentRow.Cells[3].Value.ToString();
-
-                C_Departamento.Text = DvgPosiciones.CurrentRow.Cells["Departamento"].Value.ToString();
-
-            }
+         
 
         }
 
@@ -404,6 +399,25 @@ public void Limpiar()
             T_IDPuesto.Text = "";
             T_Posicion.Clear();
 
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            if (DvgPosiciones.CurrentRow != null)
+            {
+                T_IDPuesto.Text = DvgPosiciones.CurrentRow.Cells["Id"].Value.ToString();
+                T_Posicion.Text = DvgPosiciones.CurrentRow.Cells["Puestos"].Value.ToString();
+                //T_Departamento.Enabled = false;
+                //    C_Departamento.DisplayMember = DvgPosiciones.CurrentRow.Cells[3].Value.ToString();
+
+                C_Departamento.Text = DvgPosiciones.CurrentRow.Cells["Departamento"].Value.ToString();
+
+            }
+        }
+
+        private void B_Cancelar_Click(object sender, EventArgs e)
+        {
+            MantenimientoDepartamento_Load(null, null);
         }
     }
 }

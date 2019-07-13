@@ -55,17 +55,23 @@
     <Compile Include="Datos\ProNomina.cs" />
     <Compile Include="ModeloDeDatos\Departamentos.cs" />
     <Compile Include="ModeloDeDatos\Posiciones.cs" />
+    <Compile Include="Presentacion\BusquedaNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\BusquedaNomina.Designer.cs">
+      <DependentUpon>BusquedaNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CalculoPrestaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CalculoPrestaciones.designer.cs">
+      <DependentUpon>CalculoPrestaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\DescuentosPorLey.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\DescuentosPorLey.Designer.cs">
       <DependentUpon>DescuentosPorLey.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\FEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\FEmpleado.Designer.cs">
-      <DependentUpon>FEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="ModeloDeDatos\Empleados.cs" />
     <Compile Include="Presentacion\Frm_Nomina.cs">
@@ -118,11 +124,14 @@
     </Compile>
     <Compile Include="Presentacion\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\BusquedaNomina.resx">
+      <DependentUpon>BusquedaNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CalculoPrestaciones.resx">
+      <DependentUpon>CalculoPrestaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\DescuentosPorLey.resx">
       <DependentUpon>DescuentosPorLey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FEmpleado.resx">
-      <DependentUpon>FEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Frm_Nomina.resx">
       <DependentUpon>Frm_Nomina.cs</DependentUpon>

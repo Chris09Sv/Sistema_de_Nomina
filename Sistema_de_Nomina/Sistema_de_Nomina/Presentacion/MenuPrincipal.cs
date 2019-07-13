@@ -38,5 +38,11 @@ namespace Sistema_de_Nomina.Presentacion
             this.Hide();
 
         }
+
+        private void hISTORIALDENOMINAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BusquedaNomina b = new BusquedaNomina();
+            b.Show();
+        }
     }
 }
