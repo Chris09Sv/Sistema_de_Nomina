@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_de_Nomina.ModeloDeDatos;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -61,12 +62,12 @@ namespace Sistema_de_Nomina.Datos
                               Conexiones.MakeParam("@SEG_SOC",SqlDbType.Decimal,0,deduccion.SEG_SOC),
                               Conexiones.MakeParam("@OTROS_DESCUENTOS",SqlDbType.Decimal,0,deduccion.OTROS_DESCUENTOS),
 
-
+                              
 
 
             };
             return Convert.ToInt32(Conexiones.ExecuteScalar("stp_actualizardesc", dbParams));
         }
+
     }
 }
-

@@ -49,69 +49,54 @@ namespace Sistema_de_Nomina.Presentacion
                 DataSet ds = PEmpleados.Vista();
                 dt = ds.Tables[0];
                 dataGridView1.DataSource = dt;
-                dataGridView1.Columns["Id"].Visible = false;
-     
             }
             catch (Exception error)
             {
                 MessageBox.Show(error.Message + error.StackTrace);
             }
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Columns[1].Visible = false;
+
         }
 
         private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
+            frmpro p = new frmpro();
+            p.Show();
             this.Close();
         }
 
         private void B_Guardar_Click(object sender, EventArgs e)
         {
-          
+            Empleados empleados = new Empleados();
+          //  empleados.Id;
+            empleados.Nombre=T_Nombre.Text;
+            empleados.Apellido=T_Apellido.Text;
+            empleados.Cedula=T_Cedula.Text;
+            empleados.Direccion=T_Direccion.Text;
+            empleados.Email=T_Correo.Text;
+            empleados.Telefono=T_Telefono.Text;
+           empleados.IdPuesto=Convert.ToInt32(C_Puesto.SelectedValue.ToString());
+            empleados.FechaDeNacimiento = DTP_FechaNacimiento.Value;
+            empleados.FechaDeContratacion= DTP_FechaIngreso.Value;
+            empleados.Sueldo = Convert.ToDecimal(T_Salario.Text);
+            empleados.EstadoCivil = T_EstadoCivil.Text;
+            empleados.Estado=T_Status.Text;
+            empleados.NoCuenta =Convert.ToInt32(T_NoCuenta.Text);
 
-            if (T_Nombre.Text == "" || T_Apellido.Text == "" || T_Cedula.Text == "" || T_Direccion.Text == "" || T_Telefono.Text == "")
+            if (lbl_id.Text == "")
             {
-                MessageBox.Show("Complete los datos antes de continuar.");
+                if (PEmpleados.Insertar(empleados) > 0)
+                {
+                    MessageBox.Show("Empleado registrado correctamente");
+                }
             }
             else
             {
-                Empleados empleados = new Empleados();
-                //  empleados.Id;
-                empleados.Nombre = T_Nombre.Text;
-                empleados.Apellido = T_Apellido.Text;
-                empleados.Cedula = T_Cedula.Text;
-                empleados.Direccion = T_Direccion.Text;
-                empleados.Email = T_Correo.Text;
-                empleados.Telefono = T_Telefono.Text;
-                empleados.IdPuesto = Convert.ToInt32(C_Puesto.SelectedValue.ToString());
-                empleados.FechaDeNacimiento = DTP_FechaNacimiento.Value;
-                empleados.FechaDeContratacion = DTP_FechaIngreso.Value;
-                empleados.Sueldo = Convert.ToDecimal(T_Salario.Text);
-                empleados.EstadoCivil = T_EstadoCivil.Text;
-                empleados.Estado = T_Status.Text;
-                empleados.NoCuenta = Convert.ToInt32(T_NoCuenta.Text);
+                empleados.Id = Convert.ToInt32(lbl_id.Text);
 
-                if (lbl_id.Text == "")
+                if (PEmpleados.Modificar(empleados) == 1)
                 {
-                    if (PEmpleados.Insertar(empleados) > 0)
-                    {
-                        MessageBox.Show("Empleado registrado correctamente");
-                        Limpiar();
-                    }
+                    MessageBox.Show("Empleado modificado Correctamente");
                 }
-                else
-                {
-                    empleados.Id = Convert.ToInt32(lbl_id.Text);
-
-                    if (PEmpleados.Modificar(empleados) == 1)
-                    {
-                        MessageBox.Show("Empleado modificado Correctamente");
-                    }
-                }
-
-
             }
 
         }
@@ -195,9 +180,6 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void MantenimientoEmpleado_Load(object sender, EventArgs e)
         {
-            T_NoCuenta.Text = "0";
-            T_Salario.Text = "0";
-            comboBox1.Text = "Nombre";
             try
             {
                 DataSet ds = ProDepartamento.VistaDePuestos();
@@ -218,8 +200,6 @@ namespace Sistema_de_Nomina.Presentacion
                 DataSet ds = PEmpleados.Vista();
                 dt = ds.Tables[0];
                 dataGridView1.DataSource = dt;
-                dataGridView1.Columns["Id"].Visible = false;
-
             }
             catch (Exception error)
             {
@@ -241,47 +221,6 @@ namespace Sistema_de_Nomina.Presentacion
             {
 
             }
-        }
-
-        private void T_Apellido_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void T_Correo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void G_Empleado_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void B_Nuevo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-       
-        private  void Limpiar()
-        {
-            T_Nombre.Text = "";
-            T_Apellido.Text="";
-             T_Cedula.Text="";
-             T_Direccion.Text="";
-             T_Correo.Text="";
-             T_Telefono.Text="";
-            //  Convert.ToInt32(C_Puesto.SelectedValue.ToString());
-
-            T_Salario.Text = "";
-
-            T_NoCuenta.Text="";
         }
     }
 }

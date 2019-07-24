@@ -16,5 +16,10 @@ namespace Sistema_de_Nomina.Presentacion
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,25 +19,6 @@ namespace Sistema_de_Nomina.Datos
             };
             return Conexiones.ExecuteDataSet("store_Vista_Empleado", dbparams);
         }
-        public static DataSet VistaNominaIndividual(Empleados empleado)
-        {
-            SqlParameter[] dbparams = new SqlParameter[]
-            {
-             Conexiones.MakeParam("@IdEmpleado",SqlDbType.Int,0,empleado.Id),
-
-            };
-            return Conexiones.ExecuteDataSet("_Ver_Nomina_individual", dbparams);
-        }
-        
-        public static DataSet VistaPrestamo()
-        {
-            SqlParameter[] dbparams = new SqlParameter[]
-            {
-
-            };
-            return Conexiones.ExecuteDataSet("_store_vista_Prestamo", dbparams);
-        }
-        
         public static int Insertar(Empleados empleado)
         {
             SqlParameter[] dbParametro = new SqlParameter[]

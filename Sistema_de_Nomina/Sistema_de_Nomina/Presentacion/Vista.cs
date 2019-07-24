@@ -24,10 +24,10 @@ namespace Sistema_de_Nomina.Presentacion
         {
             try
             {
-                DataSet ds = PEmpleados.VistaPrestamo();
+                DataSet ds = PEmpleados.Vista();
                 dt = ds.Tables[0];
                 DgvEmpleados.DataSource = dt;
-                DgvEmpleados.Columns["Id"].Visible = false;
+
                 if (dt.Rows.Count > 0)
                 {
 
@@ -54,71 +54,41 @@ namespace Sistema_de_Nomina.Presentacion
         {
             if (DgvEmpleados.CurrentRow != null)
             {
-                //T_Id.Text = DgvEmpleados.CurrentRow.Cells["Id"].Value.ToString();
-                //T_Nombre.Text = DgvEmpleados.CurrentRow.Cells["Nombre"].Value.ToString();
-                //T_Apellido.Text = DgvEmpleados.CurrentRow.Cells["Apellido"].Value.ToString();
-                //T_Direccion.Text = DgvEmpleados.CurrentRow.Cells["Direccion"].Value.ToString();
-                //T_Email.Text = DgvEmpleados.CurrentRow.Cells["Email"].Value.ToString();
-                //T_Telefono.Text = DgvEmpleados.CurrentRow.Cells["Telefono"].Value.ToString();
-                //T_Puesto.Text = DgvEmpleados.CurrentRow.Cells["Puesto"].Value.ToString();
+                T_Id.Text = DgvEmpleados.CurrentRow.Cells["Id"].Value.ToString();
+                T_Nombre.Text = DgvEmpleados.CurrentRow.Cells["Nombre"].Value.ToString();
+                T_Apellido.Text = DgvEmpleados.CurrentRow.Cells["Apellido"].Value.ToString();
+                T_Direccion.Text = DgvEmpleados.CurrentRow.Cells["Direccion"].Value.ToString();
+                T_Email.Text = DgvEmpleados.CurrentRow.Cells["Email"].Value.ToString();
+                T_Telefono.Text = DgvEmpleados.CurrentRow.Cells["Telefono"].Value.ToString();
+                T_Puesto.Text = DgvEmpleados.CurrentRow.Cells["Puesto"].Value.ToString();
 
 
             }
-        }
-        private bool check = false;
-        public void setFlag(bool value)
-        {
-            check = value;
-
-        }
-        private void DgvEmpleados_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (check == true)
-            {
-                PrestamosyBonificaciones p = PrestamosyBonificaciones.GetInstancia();
-                p.setEmpleao(DgvEmpleados.CurrentRow.Cells["Id"].Value.ToString(), DgvEmpleados.CurrentRow.Cells["Nombre"].Value.ToString(), DgvEmpleados.CurrentRow.Cells["Apellido"].Value.ToString(), DgvEmpleados.CurrentRow.Cells["Salario"].Value.ToString());
-                // p.Enabled = true;
-                //  
-                p.Show();               // MessageBox.Show(" ");
-
-                Hide();
-            }
-
         }
 
         private void B_Guardar_Click(object sender, EventArgs e)
         {
+            Empleados ep = new Empleados();
+            ep.Id = Convert.ToInt32(T_Id.Text); 
+            ep.Nombre = T_Nombre.Text;
+            ep.Apellido = T_Apellido.Text;
+            ep.Cedula = T_Cedula.Text;
+            ep.Direccion = T_Direccion.Text;
+            ep.Email = T_Email.Text;
+            ep.Telefono = T_Telefono.Text;
+            ep.FechaDeNacimiento = T_FechaDeNacimiento.Value;
+            ep.FechaDeContratacion = T_FechaDeContratacion.Value;
+            ep.Puesto = T_Puesto.Text;
+         ///   ep.Departamento = T_Departamento.Text;
+            //  ep.Sueldo = Convert.ToByte(T_Sueldo.Text);
 
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            if (check == true)
+            if (PEmpleados.Modificar(ep) == 1)
             {
-                PrestamosyBonificaciones p = PrestamosyBonificaciones.GetInstancia();
-                p.setEmpleao(DgvEmpleados.CurrentRow.Cells["Id"].Value.ToString(), DgvEmpleados.CurrentRow.Cells["Nombre"].Value.ToString(), DgvEmpleados.CurrentRow.Cells["Apellido"].Value.ToString(), DgvEmpleados.CurrentRow.Cells["Salario"].Value.ToString());
-                // p.Enabled = true;
-                //  
-                p.Show();               // MessageBox.Show(" ");
-
-                Hide();
-              //  p.Show();
-            }
-        }
-
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-            try
-            {
-                DataView dv = new DataView(dt.Copy());
-                dv.RowFilter = "Nombre"+ " Like '%" + T_Buscar.Text + "%'";
-                DgvEmpleados.DataSource = dv;
-            }
-            catch
-            {
-
-            }
+                MessageBox.Show("Datos Modificados correctamente!");
+                Form1_Load(null, null);
+                    
+                    
+              }
         }
     }
 }

@@ -28,182 +28,134 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.B_Guardar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Id_Nomina = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.T_Dollar = new System.Windows.Forms.TextBox();
-            this.DTP_FechaNomina = new System.Windows.Forms.DateTimePicker();
-            this.B_GenerarNomina = new System.Windows.Forms.Button();
-            this.CBX_Estatus = new System.Windows.Forms.ComboBox();
-            this.T_Usuario = new System.Windows.Forms.TextBox();
-            this.t_IdNomina = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CBX_Estatus = new System.Windows.Forms.ComboBox();
+            this.DTP_FechaNomina = new System.Windows.Forms.DateTimePicker();
+            this.T_Usuario = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CB_Estatus = new System.Windows.Forms.CheckBox();
+            this.CB_Usuario = new System.Windows.Forms.CheckBox();
+            this.CB_FechaNomina = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.B_GenerarNomina = new System.Windows.Forms.Button();
+            this.B_Cancelar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // B_Guardar
+            // panel1
             // 
-            this.B_Guardar.Location = new System.Drawing.Point(20, 346);
-            this.B_Guardar.Name = "B_Guardar";
-            this.B_Guardar.Size = new System.Drawing.Size(96, 23);
-            this.B_Guardar.TabIndex = 2;
-            this.B_Guardar.Text = "Guardar";
-            this.B_Guardar.UseVisualStyleBackColor = true;
-            this.B_Guardar.Click += new System.EventHandler(this.B_Guardar_Click);
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.CBX_Estatus);
+            this.panel1.Controls.Add(this.DTP_FechaNomina);
+            this.panel1.Controls.Add(this.T_Usuario);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.CB_Estatus);
+            this.panel1.Controls.Add(this.CB_Usuario);
+            this.panel1.Controls.Add(this.CB_FechaNomina);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(9, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(776, 162);
+            this.panel1.TabIndex = 1;
             // 
-            // panel2
+            // CBX_Estatus
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.B_Guardar);
-            this.panel2.Location = new System.Drawing.Point(9, 129);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(990, 381);
-            this.panel2.TabIndex = 3;
+            this.CBX_Estatus.FormattingEnabled = true;
+            this.CBX_Estatus.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.CBX_Estatus.Location = new System.Drawing.Point(581, 82);
+            this.CBX_Estatus.Name = "CBX_Estatus";
+            this.CBX_Estatus.Size = new System.Drawing.Size(121, 21);
+            this.CBX_Estatus.TabIndex = 10;
             // 
-            // comboBox1
+            // DTP_FechaNomina
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Nombre",
-            "Puesto",
-            "Departamento",
-            "Cedula",
-            "Apellido"});
-            this.comboBox1.Location = new System.Drawing.Point(13, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 26);
-            this.comboBox1.TabIndex = 133;
+            this.DTP_FechaNomina.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DTP_FechaNomina.Location = new System.Drawing.Point(135, 83);
+            this.DTP_FechaNomina.Name = "DTP_FechaNomina";
+            this.DTP_FechaNomina.Size = new System.Drawing.Size(89, 20);
+            this.DTP_FechaNomina.TabIndex = 9;
             // 
-            // textBox1
+            // T_Usuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(351, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
-            this.textBox1.TabIndex = 13;
-            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(313, 345);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 23);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Seleccionados";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(632, 291);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "label6";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(479, 291);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Impuesto";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(310, 291);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
+            this.T_Usuario.Location = new System.Drawing.Point(332, 83);
+            this.T_Usuario.Name = "T_Usuario";
+            this.T_Usuario.Size = new System.Drawing.Size(136, 20);
+            this.T_Usuario.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(66, 291);
+            this.label5.Location = new System.Drawing.Point(533, 85);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Impuesto";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Estatus";
             // 
-            // button1
+            // label4
             // 
-            this.button1.Location = new System.Drawing.Point(152, 346);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(283, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Usuario";
             // 
-            // dataGridView1
+            // label3
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Seleccionar});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(984, 240);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(38, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Fecha de Nomina";
             // 
-            // Seleccionar
+            // CB_Estatus
             // 
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
+            this.CB_Estatus.AutoSize = true;
+            this.CB_Estatus.Location = new System.Drawing.Point(512, 85);
+            this.CB_Estatus.Name = "CB_Estatus";
+            this.CB_Estatus.Size = new System.Drawing.Size(15, 14);
+            this.CB_Estatus.TabIndex = 4;
+            this.CB_Estatus.UseVisualStyleBackColor = true;
             // 
-            // menuStrip1
+            // CB_Usuario
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salirToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1011, 24);
-            this.menuStrip1.TabIndex = 20;
-            this.menuStrip1.Text = "menuStrip1";
+            this.CB_Usuario.AutoSize = true;
+            this.CB_Usuario.Location = new System.Drawing.Point(262, 85);
+            this.CB_Usuario.Name = "CB_Usuario";
+            this.CB_Usuario.Size = new System.Drawing.Size(15, 14);
+            this.CB_Usuario.TabIndex = 3;
+            this.CB_Usuario.UseVisualStyleBackColor = true;
             // 
-            // salirToolStripMenuItem
+            // CB_FechaNomina
             // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            this.CB_FechaNomina.AutoSize = true;
+            this.CB_FechaNomina.Location = new System.Drawing.Point(17, 85);
+            this.CB_FechaNomina.Name = "CB_FechaNomina";
+            this.CB_FechaNomina.Size = new System.Drawing.Size(15, 14);
+            this.CB_FechaNomina.TabIndex = 2;
+            this.CB_FechaNomina.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Buscar";
             // 
             // label1
             // 
@@ -214,152 +166,78 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nominas";
             // 
-            // Id_Nomina
-            // 
-            this.Id_Nomina.AutoSize = true;
-            this.Id_Nomina.Location = new System.Drawing.Point(14, 41);
-            this.Id_Nomina.Name = "Id_Nomina";
-            this.Id_Nomina.Size = new System.Drawing.Size(0, 13);
-            this.Id_Nomina.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(501, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Fecha de Nomina";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(132, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Tasa de cambio";
-            // 
-            // T_Dollar
-            // 
-            this.T_Dollar.Location = new System.Drawing.Point(227, 13);
-            this.T_Dollar.Name = "T_Dollar";
-            this.T_Dollar.Size = new System.Drawing.Size(136, 20);
-            this.T_Dollar.TabIndex = 8;
-            // 
-            // DTP_FechaNomina
-            // 
-            this.DTP_FechaNomina.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTP_FechaNomina.Location = new System.Drawing.Point(598, 13);
-            this.DTP_FechaNomina.Name = "DTP_FechaNomina";
-            this.DTP_FechaNomina.Size = new System.Drawing.Size(89, 20);
-            this.DTP_FechaNomina.TabIndex = 9;
-            // 
             // B_GenerarNomina
             // 
-            this.B_GenerarNomina.Location = new System.Drawing.Point(13, 63);
+            this.B_GenerarNomina.Location = new System.Drawing.Point(3, 226);
             this.B_GenerarNomina.Name = "B_GenerarNomina";
             this.B_GenerarNomina.Size = new System.Drawing.Size(96, 23);
             this.B_GenerarNomina.TabIndex = 1;
             this.B_GenerarNomina.Text = "Generar Nomina";
             this.B_GenerarNomina.UseVisualStyleBackColor = true;
-            this.B_GenerarNomina.Click += new System.EventHandler(this.B_GenerarNomina_Click);
             // 
-            // CBX_Estatus
+            // B_Cancelar
             // 
-            this.CBX_Estatus.FormattingEnabled = true;
-            this.CBX_Estatus.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.CBX_Estatus.Location = new System.Drawing.Point(581, 63);
-            this.CBX_Estatus.Name = "CBX_Estatus";
-            this.CBX_Estatus.Size = new System.Drawing.Size(121, 21);
-            this.CBX_Estatus.TabIndex = 10;
-            this.CBX_Estatus.Text = "Pendiente";
+            this.B_Cancelar.Location = new System.Drawing.Point(115, 226);
+            this.B_Cancelar.Name = "B_Cancelar";
+            this.B_Cancelar.Size = new System.Drawing.Size(96, 23);
+            this.B_Cancelar.TabIndex = 2;
+            this.B_Cancelar.Text = "Cancelar";
+            this.B_Cancelar.UseVisualStyleBackColor = true;
             // 
-            // T_Usuario
+            // panel2
             // 
-            this.T_Usuario.Location = new System.Drawing.Point(227, 64);
-            this.T_Usuario.Name = "T_Usuario";
-            this.T_Usuario.Size = new System.Drawing.Size(136, 20);
-            this.T_Usuario.TabIndex = 11;
-            this.T_Usuario.Text = "1";
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.B_Cancelar);
+            this.panel2.Controls.Add(this.B_GenerarNomina);
+            this.panel2.Location = new System.Drawing.Point(9, 180);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(776, 258);
+            this.panel2.TabIndex = 3;
             // 
-            // t_IdNomina
+            // dataGridView1
             // 
-            this.t_IdNomina.Enabled = false;
-            this.t_IdNomina.Location = new System.Drawing.Point(68, 9);
-            this.t_IdNomina.Name = "t_IdNomina";
-            this.t_IdNomina.Size = new System.Drawing.Size(41, 20);
-            this.t_IdNomina.TabIndex = 12;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.B_GenerarNomina);
-            this.panel1.Controls.Add(this.t_IdNomina);
-            this.panel1.Controls.Add(this.T_Usuario);
-            this.panel1.Controls.Add(this.CBX_Estatus);
-            this.panel1.Controls.Add(this.DTP_FechaNomina);
-            this.panel1.Controls.Add(this.T_Dollar);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.Id_Nomina);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(9, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(990, 95);
-            this.panel1.TabIndex = 1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 17);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(770, 175);
+            this.dataGridView1.TabIndex = 3;
             // 
             // Mantenimiento_de__nomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Purple;
-            this.ClientSize = new System.Drawing.Size(1011, 539);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Mantenimiento_de__nomina";
             this.Text = "Mantenimiento_de__nomina";
             this.Load += new System.EventHandler(this.Mantenimiento_de__nomina_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button B_Guardar;
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox CBX_Estatus;
+        private System.Windows.Forms.DateTimePicker DTP_FechaNomina;
+        private System.Windows.Forms.TextBox T_Usuario;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox CB_Estatus;
+        private System.Windows.Forms.CheckBox CB_Usuario;
+        private System.Windows.Forms.CheckBox CB_FechaNomina;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button B_GenerarNomina;
+        private System.Windows.Forms.Button B_Cancelar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Id_Nomina;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox T_Dollar;
-        private System.Windows.Forms.DateTimePicker DTP_FechaNomina;
-        private System.Windows.Forms.Button B_GenerarNomina;
-        private System.Windows.Forms.ComboBox CBX_Estatus;
-        private System.Windows.Forms.TextBox T_Usuario;
-        private System.Windows.Forms.TextBox t_IdNomina;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

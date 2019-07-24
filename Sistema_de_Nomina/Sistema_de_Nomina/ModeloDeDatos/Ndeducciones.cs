@@ -1,6 +1,12 @@
-﻿namespace Sistema_de_Nomina.Datos
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sistema_de_Nomina.ModeloDeDatos
 {
-    public class Ndeducciones
+   public  class Ndeducciones
     {
         private int _Id;
         private decimal _ISR;
@@ -15,6 +21,5 @@
         public decimal SEG_MED { get => _SEG_MED; set => _SEG_MED = value; }
         public decimal SEG_SOC { get => _SEG_SOC; set => _SEG_SOC = value; }
         public decimal OTROS_DESCUENTOS { get => _OTROS_DESCUENTOS; set => _OTROS_DESCUENTOS = value; }
-
     }
 }

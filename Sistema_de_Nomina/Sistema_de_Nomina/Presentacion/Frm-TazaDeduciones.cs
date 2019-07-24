@@ -141,7 +141,7 @@ namespace Sistema_de_Nomina.Presentacion
                     else
                     {
                         Ndeducciones n = new Ndeducciones();
-                       // n.Id = Convert.ToInt32(txtId.Text);
+                        n.Id = Convert.ToInt32(txtId.Text);
                         n.ISR = Convert.ToDecimal(txtIsr.Text);
                         n.AFP = Convert.ToDecimal(txtAfp.Text);
                         n.SEG_MED = Convert.ToDecimal(txtSegmed.Text);
@@ -149,7 +149,7 @@ namespace Sistema_de_Nomina.Presentacion
                         n.OTROS_DESCUENTOS = Convert.ToDecimal(txtOtro.Text);
 
                        
-                        if (Cdeducciones.Guardar(n)>0)
+                        if (Cdeducciones.Modificar(n) == 1)
                         {
 
                             MessageBox.Show("Datos modificados correctamente");

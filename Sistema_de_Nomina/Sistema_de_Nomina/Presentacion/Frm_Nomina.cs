@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Sistema_de_Nomina.Presentacion
 {
-    public partial class CalculoPrestaciones : Form
+    public partial class Frm_Nomina : Form
     {
-        public CalculoPrestaciones()
+        public Frm_Nomina()
         {
             InitializeComponent();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Frm_Nomina_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
