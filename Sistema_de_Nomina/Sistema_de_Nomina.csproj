@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{918CBD09-E69F-483F-9C23-FC15B76CEE74}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sistema_de_Nomina</RootNamespace>
+    <AssemblyName>Sistema_de_Nomina</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\Conexiones.cs" />
+    <Compile Include="Datos\Deducciones.cs" />
+    <Compile Include="Datos\PrPrestamos_Y_Bonificaciones.cs" />
+    <Compile Include="ModeloDeDatos\Ndeducciones.cs" />
+    <Compile Include="ModeloDeDatos\Nomina.cs" />
+    <Compile Include="Datos\PEmpleados.cs" />
+    <Compile Include="Datos\ProDepartamento.cs" />
+    <Compile Include="Datos\ProNomina.cs" />
+    <Compile Include="ModeloDeDatos\Departamentos.cs" />
+    <Compile Include="ModeloDeDatos\Posiciones.cs" />
+    <Compile Include="ModeloDeDatos\Prestamos_y_Bonificaciones.cs" />
+    <Compile Include="Presentacion\BusquedaNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\BusquedaNomina.Designer.cs">
+      <DependentUpon>BusquedaNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CalculoPrestaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CalculoPrestaciones.designer.cs">
+      <DependentUpon>CalculoPrestaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Cuentas por cobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Cuentas por cobrar.Designer.cs">
+      <DependentUpon>Cuentas por cobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\DescuentosPorLey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\DescuentosPorLey.Designer.cs">
+      <DependentUpon>DescuentosPorLey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloDeDatos\Empleados.cs" />
+    <Compile Include="Presentacion\Frm-TazaDeduciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Frm-TazaDeduciones.designer.cs">
+      <DependentUpon>Frm-TazaDeduciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmpro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmpro.designer.cs">
+      <DependentUpon>frmpro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Mantenimiento de  nomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Mantenimiento de  nomina.Designer.cs">
+      <DependentUpon>Mantenimiento de  nomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoDepartamento.Designer.cs">
+      <DependentUpon>MantenimientoDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoEmpleado.Designer.cs">
+      <DependentUpon>MantenimientoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoOtros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoOtros.Designer.cs">
+      <DependentUpon>MantenimientoOtros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\NominaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\NominaEmpleado.Designer.cs">
+      <DependentUpon>NominaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PrestamosyBonificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PrestamosyBonificaciones.Designer.cs">
+      <DependentUpon>PrestamosyBonificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Tasa de Deducciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Tasa de Deducciones.Designer.cs">
+      <DependentUpon>Tasa de Deducciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista.Designer.cs">
+      <DependentUpon>Vista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sistema_de_NominaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sistema_de_NominaDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Presentacion\BusquedaNomina.resx">
+      <DependentUpon>BusquedaNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CalculoPrestaciones.resx">
+      <DependentUpon>CalculoPrestaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Cuentas por cobrar.resx">
+      <DependentUpon>Cuentas por cobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\DescuentosPorLey.resx">
+      <DependentUpon>DescuentosPorLey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Frm-TazaDeduciones.resx">
+      <DependentUpon>Frm-TazaDeduciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmpro.resx">
+      <DependentUpon>frmpro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Mantenimiento de  nomina.resx">
+      <DependentUpon>Mantenimiento de  nomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MantenimientoDepartamento.resx">
+      <DependentUpon>MantenimientoDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MantenimientoEmpleado.resx">
+      <DependentUpon>MantenimientoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MantenimientoOtros.resx">
+      <DependentUpon>MantenimientoOtros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\NominaEmpleado.resx">
+      <DependentUpon>NominaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PrestamosyBonificaciones.resx">
+      <DependentUpon>PrestamosyBonificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Tasa de Deducciones.resx">
+      <DependentUpon>Tasa de Deducciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Vista.resx">
+      <DependentUpon>Vista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Sistema_de_NominaDataSet.xsc">
+      <DependentUpon>Sistema_de_NominaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema_de_NominaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sistema_de_NominaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sistema_de_NominaDataSet.xss">
+      <DependentUpon>Sistema_de_NominaDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
