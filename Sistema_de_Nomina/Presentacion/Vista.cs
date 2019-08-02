@@ -28,9 +28,14 @@ namespace Sistema_de_Nomina.Presentacion
                 dt = ds.Tables[0];
                 DgvEmpleados.DataSource = dt;
                 DgvEmpleados.Columns["Id"].Visible = false;
+                DgvEmpleados.Columns["cuenta"].Visible = false;
+
                 if (dt.Rows.Count > 0)
                 {
+                    foreach (DataGridViewRow row in DgvEmpleados.Rows)
 
+                        if (string.IsNullOrEmpty(row.Cells["balance"].Value.ToString()))
+                            row.Cells["balance"].Value = 0;
                 }
                 else
                 {
@@ -76,7 +81,16 @@ namespace Sistema_de_Nomina.Presentacion
             if (check == true)
             {
                 PrestamosyBonificaciones p = PrestamosyBonificaciones.GetInstancia();
-                p.setEmpleao(DgvEmpleados.CurrentRow.Cells["Id"].Value.ToString(), DgvEmpleados.CurrentRow.Cells["Nombre"].Value.ToString(), DgvEmpleados.CurrentRow.Cells["Apellido"].Value.ToString(), DgvEmpleados.CurrentRow.Cells["Salario"].Value.ToString());
+                p.setEmpleao(
+                    DgvEmpleados.CurrentRow.Cells["cuenta"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["Id"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["Nombre"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["Apellido"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["Salario"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["balance"].Value.ToString()
+
+
+                    );
                 // p.Enabled = true;
                 //  
                 p.Show();               // MessageBox.Show(" ");
@@ -95,13 +109,25 @@ namespace Sistema_de_Nomina.Presentacion
         {
             if (check == true)
             {
-                PrestamosyBonificaciones p = PrestamosyBonificaciones.GetInstancia();
-                p.setEmpleao(DgvEmpleados.CurrentRow.Cells["Id"].Value.ToString(), DgvEmpleados.CurrentRow.Cells["Nombre"].Value.ToString(), DgvEmpleados.CurrentRow.Cells["Apellido"].Value.ToString(), DgvEmpleados.CurrentRow.Cells["Salario"].Value.ToString());
-                // p.Enabled = true;
-                //  
-                p.Show();               // MessageBox.Show(" ");
+                PrestamosyBonificaciones P = PrestamosyBonificaciones.GetInstancia();
+             //   frmpro f = new frmpro();
+                P.setEmpleao(
+                    DgvEmpleados.CurrentRow.Cells["cuenta"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["Id"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["Nombre"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["Apellido"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["Salario"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["balance"].Value.ToString() == null ? "0" : DgvEmpleados.CurrentRow.Cells["balance"].Value.ToString()
 
-                Hide();
+
+                    );
+
+
+           //     P.MdiParent=f;
+              //  f.MdiParent = P;
+                P.Show();               // MessageBox.Show(" ");
+                
+                Close();
               //  p.Show();
             }
         }

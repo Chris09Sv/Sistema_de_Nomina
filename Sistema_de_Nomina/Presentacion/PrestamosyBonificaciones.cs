@@ -20,13 +20,28 @@ namespace Sistema_de_Nomina.Presentacion
             InitializeComponent();
         }
         private int IdEmpleado = 0;
+        private int CuentaP = 0;
 
-        public void setEmpleao(string Id,string Nombre, string apellido, string salario)
+
+        public void setEmpleao(string cuenta,string Id,string Nombre, string apellido, string salario,string Cantidad)
         {
+            MessageBox.Show(cuenta);
+            if (cuenta == "" || string.IsNullOrWhiteSpace(cuenta))
+            {
+                CuentaP = 0;
+            }
+            else { CuentaP = Convert.ToInt32(cuenta); } 
             IdEmpleado =Convert.ToInt32( Id);
             T_Nombre.Text = Nombre + " " + apellido;
             T_Salario.Text = salario.ToString();
+        //    T_NuevaCantidad.Text=NuevaCantidad.ToString();
+            T_Cantidad.Text=Cantidad.ToString();
+            if (T_Cantidad.Text != "0" )
+            {
+                T_NuevaCantidad.Visible = true;
+                T_Cantidad.Enabled = false; 
 
+            }
 
         }
         public static PrestamosyBonificaciones _instancia;
@@ -35,6 +50,7 @@ namespace Sistema_de_Nomina.Presentacion
             if (_instancia == null)
                 _instancia = new PrestamosyBonificaciones();
             return _instancia;
+
         }
         private void Button3_Click(object sender, EventArgs e)
         { 
@@ -48,13 +64,18 @@ namespace Sistema_de_Nomina.Presentacion
         private bool flag = false;
         private void Button1_Click(object sender, EventArgs e)
         {
+            frmpro fm = new frmpro();
+
             Vista m = new Vista();
 
             m.setFlag(true);
             Hide();
-
             m.ShowDialog();
 
+            //PrestamosyBonificaciones p = new PrestamosyBonificaciones();
+            //p.MdiParent = this;
+            //p.Show();
+            //pbMenu_Click(null, null);
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -64,7 +85,7 @@ namespace Sistema_de_Nomina.Presentacion
             P.IdEmpleado1 = IdEmpleado;
 
 
-            P.Prestamo1 = Convert.ToDecimal(T_Cantidad.Text);
+            P.Prestamo1 = prestamo;
             P.Cuota1 = Convert.ToDecimal(T_Cuota.Text);
             P.Interes1 = Convert.ToDecimal(T_Interes.Text);
             P.Meses = Convert.ToInt32(comboBox1.Text);
@@ -77,16 +98,31 @@ namespace Sistema_de_Nomina.Presentacion
             else
             {
 
-
-
-                if (PrPrestamos_Y_Bonificaciones.Insertar(P) > 0)
+                if(CuentaP==0)
                 {
-                    MessageBox.Show("Prestamo Registrado ");
-                    //MenuPrincipal m = new MenuPrincipal();
-                    //m.Show();
+                    if (PrPrestamos_Y_Bonificaciones.Insertar(P) > 0)
+                    {
+                        MessageBox.Show("Prestamo Registrado ");
+                        //MenuPrincipal m = new MenuPrincipal();
+                        //m.Show();
 
-                    this.Close();
+                        this.Close();
+                    }
                 }
+                else
+                {
+                    P.Id = CuentaP;
+                    if (PrPrestamos_Y_Bonificaciones.Update(P) > 0)
+                    {
+                        MessageBox.Show("Prestamo actualizado ");
+                        //MenuPrincipal m = new MenuPrincipal();
+                        //m.Show();
+
+                        this.Close();
+                    }
+
+                }
+               
             }
         }
         private decimal prestamo;
@@ -121,7 +157,8 @@ namespace Sistema_de_Nomina.Presentacion
           //  T_Cantidad_TextChanged(null,null);
             if (T_Cantidad.Text != "")
             {
-                prestamo = Convert.ToDecimal(T_Cantidad.Text);
+              //  if(T_NuevaCantidad.Text!=0)
+                prestamo = Convert.ToDecimal(T_Cantidad.Text)+Convert.ToDecimal(T_NuevaCantidad.Text);
                 duracion = Convert.ToDecimal(comboBox1.Text);
 
                 cuota = prestamo / duracion;

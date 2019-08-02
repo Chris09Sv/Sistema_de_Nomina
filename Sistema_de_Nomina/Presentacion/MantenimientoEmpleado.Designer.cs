@@ -68,20 +68,26 @@
             this.BusquedaEmpleado = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.G_Busqueda = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.B_Editar = new System.Windows.Forms.Button();
             this.B_Eliminar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.T_Buscar = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.G_Empleado.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.G_Busqueda.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -427,7 +433,7 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1066, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1282, 29);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -461,31 +467,16 @@
             // G_Busqueda
             // 
             this.G_Busqueda.BackColor = System.Drawing.Color.White;
-            this.G_Busqueda.Controls.Add(this.pictureBox1);
-            this.G_Busqueda.Controls.Add(this.button2);
-            this.G_Busqueda.Controls.Add(this.B_Editar);
-            this.G_Busqueda.Controls.Add(this.B_Eliminar);
-            this.G_Busqueda.Controls.Add(this.comboBox1);
-            this.G_Busqueda.Controls.Add(this.dataGridView1);
-            this.G_Busqueda.Controls.Add(this.T_Buscar);
-            this.G_Busqueda.Controls.Add(this.label25);
-            this.G_Busqueda.Controls.Add(this.label27);
+            this.G_Busqueda.Controls.Add(this.panel3);
+            this.G_Busqueda.Controls.Add(this.panel2);
+            this.G_Busqueda.Controls.Add(this.panel1);
+            this.G_Busqueda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.G_Busqueda.Font = new System.Drawing.Font("Modern No. 20", 12F);
-            this.G_Busqueda.Location = new System.Drawing.Point(0, 29);
+            this.G_Busqueda.Location = new System.Drawing.Point(0, 0);
             this.G_Busqueda.Name = "G_Busqueda";
-            this.G_Busqueda.Size = new System.Drawing.Size(1054, 527);
+            this.G_Busqueda.Size = new System.Drawing.Size(1282, 746);
             this.G_Busqueda.TabIndex = 66;
             this.G_Busqueda.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Sistema_de_Nomina.Properties.Resources.download__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(675, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(373, 110);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 137;
-            this.pictureBox1.TabStop = false;
             // 
             // button2
             // 
@@ -496,7 +487,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(624, 475);
+            this.button2.Location = new System.Drawing.Point(709, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 30);
             this.button2.TabIndex = 136;
@@ -512,7 +503,7 @@
             this.B_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B_Editar.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B_Editar.ForeColor = System.Drawing.Color.White;
-            this.B_Editar.Location = new System.Drawing.Point(400, 475);
+            this.B_Editar.Location = new System.Drawing.Point(485, 5);
             this.B_Editar.Name = "B_Editar";
             this.B_Editar.Size = new System.Drawing.Size(90, 30);
             this.B_Editar.TabIndex = 135;
@@ -529,13 +520,36 @@
             this.B_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B_Eliminar.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B_Eliminar.ForeColor = System.Drawing.Color.White;
-            this.B_Eliminar.Location = new System.Drawing.Point(179, 475);
+            this.B_Eliminar.Location = new System.Drawing.Point(264, 5);
             this.B_Eliminar.Name = "B_Eliminar";
             this.B_Eliminar.Size = new System.Drawing.Size(90, 30);
             this.B_Eliminar.TabIndex = 134;
             this.B_Eliminar.Text = "Eliminar";
             this.B_Eliminar.UseVisualStyleBackColor = false;
             this.B_Eliminar.Click += new System.EventHandler(this.B_Eliminar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.T_Buscar);
+            this.panel1.Controls.Add(this.label25);
+            this.panel1.Controls.Add(this.label27);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 21);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1276, 131);
+            this.panel1.TabIndex = 137;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sistema_de_Nomina.Properties.Resources.download__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(883, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(373, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 142;
+            this.pictureBox1.TabStop = false;
             // 
             // comboBox1
             // 
@@ -548,15 +562,66 @@
             "Departamento",
             "Cedula",
             "Apellido"});
-            this.comboBox1.Location = new System.Drawing.Point(535, 43);
+            this.comboBox1.Location = new System.Drawing.Point(643, 29);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(134, 26);
-            this.comboBox1.TabIndex = 132;
+            this.comboBox1.TabIndex = 141;
+            // 
+            // T_Buscar
+            // 
+            this.T_Buscar.Font = new System.Drawing.Font("Modern No. 20", 12F);
+            this.T_Buscar.Location = new System.Drawing.Point(229, 30);
+            this.T_Buscar.Name = "T_Buscar";
+            this.T_Buscar.Size = new System.Drawing.Size(345, 25);
+            this.T_Buscar.TabIndex = 140;
+            this.T_Buscar.TextChanged += new System.EventHandler(this.T_Buscar_TextChanged);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Modern No. 20", 12F);
+            this.label25.Location = new System.Drawing.Point(124, 70);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(138, 18);
+            this.label25.TabIndex = 139;
+            this.label25.Text = "Busqueda Avanzada";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Modern No. 20", 12F);
+            this.label27.Location = new System.Drawing.Point(121, 37);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(52, 18);
+            this.label27.TabIndex = 138;
+            this.label27.Text = "Buscar";
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 152);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1276, 591);
+            this.panel2.TabIndex = 138;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.B_Eliminar);
+            this.panel3.Controls.Add(this.B_Editar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(3, 667);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1276, 76);
+            this.panel3.TabIndex = 139;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(105)))), ((int)(((byte)(162)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -578,7 +643,8 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 134);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -594,56 +660,30 @@
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.Size = new System.Drawing.Size(1032, 319);
-            this.dataGridView1.TabIndex = 129;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick_1);
+            this.dataGridView1.Size = new System.Drawing.Size(1274, 589);
+            this.dataGridView1.TabIndex = 141;
             // 
             // Eliminar
             // 
+            this.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(96)))), ((int)(((byte)(97)))));
             dataGridViewCellStyle2.NullValue = false;
             this.Eliminar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Eliminar.FillWeight = 50F;
             this.Eliminar.HeaderText = "Eliminar";
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
             this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // T_Buscar
-            // 
-            this.T_Buscar.Font = new System.Drawing.Font("Modern No. 20", 12F);
-            this.T_Buscar.Location = new System.Drawing.Point(121, 44);
-            this.T_Buscar.Name = "T_Buscar";
-            this.T_Buscar.Size = new System.Drawing.Size(345, 25);
-            this.T_Buscar.TabIndex = 128;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Modern No. 20", 12F);
-            this.label25.Location = new System.Drawing.Point(16, 84);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(138, 18);
-            this.label25.TabIndex = 90;
-            this.label25.Text = "Busqueda Avanzada";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Modern No. 20", 12F);
-            this.label27.Location = new System.Drawing.Point(13, 51);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(52, 18);
-            this.label27.TabIndex = 89;
-            this.label27.Text = "Buscar";
+            this.Eliminar.Width = 50;
             // 
             // MantenimientoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1066, 557);
+            this.ClientSize = new System.Drawing.Size(1282, 746);
             this.ControlBox = false;
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.G_Busqueda);
@@ -658,8 +698,11 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.G_Busqueda.ResumeLayout(false);
-            this.G_Busqueda.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -703,15 +746,18 @@
         private System.Windows.Forms.ComboBox T_Status;
         private System.Windows.Forms.ComboBox T_EstadoCivil;
         private System.Windows.Forms.GroupBox G_Busqueda;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox T_Buscar;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Button B_Eliminar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button B_Editar;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox T_Buscar;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label27;
     }
 }

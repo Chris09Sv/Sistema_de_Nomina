@@ -40,7 +40,10 @@ namespace Sistema_de_Nomina.Datos
         private decimal _Otros;
         private decimal _ISR;
         private string cedula;
+        private decimal salario;
 
+
+        public decimal Salario { get => salario; set => salario = value; }
 
         public int IdNomina { get => _IdNomina; set => _IdNomina = value; }
         public int Id_Empleado { get => _Id_Empleado; set => _Id_Empleado = value; }

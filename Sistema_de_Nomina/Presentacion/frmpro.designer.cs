@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmpro));
             this.pnMenu = new System.Windows.Forms.Panel();
+            this.b_regalia = new System.Windows.Forms.Button();
+            this.B_VerCuentas = new System.Windows.Forms.Button();
             this.btnEmpleado = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnTazaDeducciones = new System.Windows.Forms.Button();
@@ -49,7 +51,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pbMenu = new System.Windows.Forms.PictureBox();
-            this.B_VerCuentas = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -63,6 +65,8 @@
             // pnMenu
             // 
             this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(63)))), ((int)(((byte)(140)))));
+            this.pnMenu.Controls.Add(this.button2);
+            this.pnMenu.Controls.Add(this.b_regalia);
             this.pnMenu.Controls.Add(this.B_VerCuentas);
             this.pnMenu.Controls.Add(this.btnEmpleado);
             this.pnMenu.Controls.Add(this.pictureBox5);
@@ -88,6 +92,39 @@
             this.pnMenu.TabIndex = 0;
             this.pnMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // b_regalia
+            // 
+            this.b_regalia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.b_regalia.FlatAppearance.BorderSize = 0;
+            this.b_regalia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b_regalia.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_regalia.ForeColor = System.Drawing.Color.White;
+            this.b_regalia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.b_regalia.Location = new System.Drawing.Point(72, 255);
+            this.b_regalia.Name = "b_regalia";
+            this.b_regalia.Size = new System.Drawing.Size(195, 31);
+            this.b_regalia.TabIndex = 13;
+            this.b_regalia.Text = "Nomina de regalia";
+            this.b_regalia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.b_regalia.UseVisualStyleBackColor = true;
+            this.b_regalia.Click += new System.EventHandler(this.B_regalia_Click);
+            // 
+            // B_VerCuentas
+            // 
+            this.B_VerCuentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.B_VerCuentas.FlatAppearance.BorderSize = 0;
+            this.B_VerCuentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B_VerCuentas.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.B_VerCuentas.ForeColor = System.Drawing.Color.White;
+            this.B_VerCuentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.B_VerCuentas.Location = new System.Drawing.Point(72, 468);
+            this.B_VerCuentas.Name = "B_VerCuentas";
+            this.B_VerCuentas.Size = new System.Drawing.Size(172, 27);
+            this.B_VerCuentas.TabIndex = 12;
+            this.B_VerCuentas.Text = "Cuentas por Cobrar";
+            this.B_VerCuentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.B_VerCuentas.UseVisualStyleBackColor = true;
+            // 
             // btnEmpleado
             // 
             this.btnEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -96,7 +133,7 @@
             this.btnEmpleado.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpleado.ForeColor = System.Drawing.Color.White;
             this.btnEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleado.Location = new System.Drawing.Point(72, 283);
+            this.btnEmpleado.Location = new System.Drawing.Point(72, 321);
             this.btnEmpleado.Name = "btnEmpleado";
             this.btnEmpleado.Size = new System.Drawing.Size(145, 31);
             this.btnEmpleado.TabIndex = 11;
@@ -109,7 +146,7 @@
             // 
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 409);
+            this.pictureBox5.Location = new System.Drawing.Point(12, 534);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(45, 31);
             this.pictureBox5.TabIndex = 10;
@@ -124,7 +161,7 @@
             this.btnTazaDeducciones.Font = new System.Drawing.Font("Modern No. 20", 14F, System.Drawing.FontStyle.Bold);
             this.btnTazaDeducciones.ForeColor = System.Drawing.Color.White;
             this.btnTazaDeducciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTazaDeducciones.Location = new System.Drawing.Point(72, 409);
+            this.btnTazaDeducciones.Location = new System.Drawing.Point(72, 534);
             this.btnTazaDeducciones.Name = "btnTazaDeducciones";
             this.btnTazaDeducciones.Size = new System.Drawing.Size(224, 27);
             this.btnTazaDeducciones.TabIndex = 9;
@@ -141,7 +178,7 @@
             this.btnHistorial.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorial.ForeColor = System.Drawing.Color.White;
             this.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorial.Location = new System.Drawing.Point(72, 254);
+            this.btnHistorial.Location = new System.Drawing.Point(72, 284);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.Size = new System.Drawing.Size(145, 31);
             this.btnHistorial.TabIndex = 7;
@@ -203,7 +240,7 @@
             this.btnCuentas_por_Cobrar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCuentas_por_Cobrar.ForeColor = System.Drawing.Color.White;
             this.btnCuentas_por_Cobrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCuentas_por_Cobrar.Location = new System.Drawing.Point(72, 350);
+            this.btnCuentas_por_Cobrar.Location = new System.Drawing.Point(72, 442);
             this.btnCuentas_por_Cobrar.Name = "btnCuentas_por_Cobrar";
             this.btnCuentas_por_Cobrar.Size = new System.Drawing.Size(172, 27);
             this.btnCuentas_por_Cobrar.TabIndex = 3;
@@ -216,7 +253,7 @@
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 329);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 421);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(45, 31);
             this.pictureBox3.TabIndex = 2;
@@ -231,7 +268,7 @@
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 14F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(72, 320);
+            this.button1.Location = new System.Drawing.Point(72, 412);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 40);
             this.button1.TabIndex = 0;
@@ -362,21 +399,22 @@
             this.pbMenu.TabStop = false;
             this.pbMenu.Click += new System.EventHandler(this.pbMenu_Click);
             // 
-            // B_VerCuentas
+            // button2
             // 
-            this.B_VerCuentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.B_VerCuentas.FlatAppearance.BorderSize = 0;
-            this.B_VerCuentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.B_VerCuentas.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B_VerCuentas.ForeColor = System.Drawing.Color.White;
-            this.B_VerCuentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.B_VerCuentas.Location = new System.Drawing.Point(72, 376);
-            this.B_VerCuentas.Name = "B_VerCuentas";
-            this.B_VerCuentas.Size = new System.Drawing.Size(172, 27);
-            this.B_VerCuentas.TabIndex = 12;
-            this.B_VerCuentas.Text = "Cuentas por Cobrar";
-            this.B_VerCuentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.B_VerCuentas.UseVisualStyleBackColor = true;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(56, 661);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(199, 27);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Salir de la aplicacion";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // frmpro
             // 
@@ -385,7 +423,7 @@
             this.ClientSize = new System.Drawing.Size(1280, 700);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.IsMdiContainer = true;
             this.Name = "frmpro";
@@ -429,5 +467,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnEmpleado;
         private System.Windows.Forms.Button B_VerCuentas;
+        private System.Windows.Forms.Button b_regalia;
+        private System.Windows.Forms.Button button2;
     }
 }

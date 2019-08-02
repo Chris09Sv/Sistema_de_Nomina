@@ -137,6 +137,7 @@ namespace Sistema_de_Nomina.Datos
 
           Conexiones.MakeParam("@Id_Nomina",SqlDbType.Int,0,nomina.IdNomina),
                           Conexiones.MakeParam("@Id_Empleado",SqlDbType.Int,0,nomina.Id_Empleado),
+          Conexiones.MakeParam("@salario",SqlDbType.Decimal,0,nomina.Salario),
 
           Conexiones.MakeParam("@Sueldo_neto",SqlDbType.Decimal,0,nomina.Sueldo_neto),
           Conexiones.MakeParam("@AFP",SqlDbType.Decimal,0,nomina.AFP),

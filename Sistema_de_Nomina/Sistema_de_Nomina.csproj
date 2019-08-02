@@ -126,6 +126,12 @@
     <Compile Include="Presentacion\MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Nomina13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Nomina13.Designer.cs">
+      <DependentUpon>Nomina13.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\NominaEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Sistema_de_NominaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema_de_NominaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sistema_de_NominaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema_de_NominaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sistema_de_NominaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema_de_NominaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sistema_de_NominaDataSet3.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Presentacion\BusquedaNomina.resx">
       <DependentUpon>BusquedaNomina.cs</DependentUpon>
@@ -189,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Nomina13.resx">
+      <DependentUpon>Nomina13.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\NominaEmpleado.resx">
       <DependentUpon>NominaEmpleado.cs</DependentUpon>
@@ -231,6 +255,39 @@
     </None>
     <None Include="Sistema_de_NominaDataSet.xss">
       <DependentUpon>Sistema_de_NominaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema_de_NominaDataSet1.xsc">
+      <DependentUpon>Sistema_de_NominaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema_de_NominaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sistema_de_NominaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sistema_de_NominaDataSet1.xss">
+      <DependentUpon>Sistema_de_NominaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema_de_NominaDataSet2.xsc">
+      <DependentUpon>Sistema_de_NominaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema_de_NominaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sistema_de_NominaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sistema_de_NominaDataSet2.xss">
+      <DependentUpon>Sistema_de_NominaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema_de_NominaDataSet3.xsc">
+      <DependentUpon>Sistema_de_NominaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema_de_NominaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sistema_de_NominaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sistema_de_NominaDataSet3.xss">
+      <DependentUpon>Sistema_de_NominaDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -39,7 +39,7 @@ namespace Sistema_de_Nomina.Presentacion
                ultima_nomina= Convert.ToInt32(ds.Tables[0].Rows[0][1].ToString());
                 t_IdNomina.Text = dc;
 
-
+          //      B_Guardar.Enabled = false;
                 T_Dollar.Focus();
 
             }
@@ -149,7 +149,7 @@ namespace Sistema_de_Nomina.Presentacion
                 }
             }
             else
-                MessageBox.Show("Por favor ingrese la tasa de cambio para calcular la nomina");
+                MessageBox.Show("Por favor ingrese la tasa de cambio para calcular el ISR y mostrar todos los valores");
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 //if ((row.Cells["Prestamo"].ToString())== "")
@@ -239,61 +239,71 @@ namespace Sistema_de_Nomina.Presentacion
             n.Dollar = Convert.ToDecimal(T_Dollar.Text);
 
             n.Usuario1 = Convert.ToInt32(T_Usuario.Text);
-            n.Estatus1 = CBX_Estatus.Text;
+            n.Estatus1 = "Nomina Cerrada";
             n.Fecha1 = DateTime.Today;
             n.Fecha2 = DTP_FechaNomina.Value;
             // ProNomina.GuardarNomina(n);
-            if (ultima_nomina <= 25)
-            {
-                MessageBox.Show("La ultima nomina fue registrada hace: " + ultima_nomina + "dias");
 
-            }
-            else
-            {
-
-                
-
-                if (ProNomina.GuardarNomina(n) > 0)
-                    MessageBox.Show("la nomina se ha registrado correctamente");
-
-
-
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+               if( MessageBox.Show("Esta seguro que desea cerrar la nomina #"+ DateTime.Today.Month+"? ",  "Registrar Nomina " , MessageBoxButtons.OKCancel, MessageBoxIcon.Hand) == DialogResult.OK)
                 {
-                    DetalleNomina dn = new DetalleNomina();
-                    Prestamos_y_Bonificaciones p = new Prestamos_y_Bonificaciones();
-
-
-
-                    dn.Id_Empleado = Convert.ToInt32(row.Cells["Id"].Value.ToString());
-                    dn.IdNomina = Convert.ToInt32(t_IdNomina.Text);
-                    //   p.Meses = Convert.ToInt32(t_IdNomina.Text);
-                    dn.AFP = Convert.ToDecimal(row.Cells["AFP"].Value.ToString());
-                    dn.Seg_Med = Convert.ToDecimal(row.Cells["Seguro medico"].Value.ToString());
-                    dn.Sueldo_neto = Convert.ToDecimal(row.Cells["Sueldo neto"].Value.ToString());
-                    dn.ISR = Convert.ToDecimal(row.Cells["Isr"].Value.ToString());
-                    dn.Otros = Convert.ToDecimal(row.Cells["Otros"].Value);
-                    p.Cuota1 = Convert.ToDecimal(row.Cells["Otros"].Value);
-                    if (p.Cuota1 > 0)
+                    if (ultima_nomina <=25)
                     {
-                        p.Cuenta = Convert.ToInt32(row.Cells["CuentaId"].Value);
-                        if (ProNomina.GuardarDetalleNomina(dn) > 0)
-                            MessageBox.Show("la nomina se ha registrado correctamente");
-
-                        if (ProNomina.GuardarPrestamo(p) > 0)
-                            MessageBox.Show("Prestamo");
+                        MessageBox.Show("La ultima nomina fue registrada hace: " + ultima_nomina + "dias");
 
                     }
                     else
                     {
-                        if (ProNomina.GuardarDetalleNomina(dn) > 0)
+
+
+                 //   if(CBX_Estatus.Text==)
+                        if (ProNomina.GuardarNomina(n) > 0)
                             MessageBox.Show("la nomina se ha registrado correctamente");
+                        foreach (DataGridViewRow row in dataGridView1.Rows)
+                        {
+                            DetalleNomina dn = new DetalleNomina();
+                            Prestamos_y_Bonificaciones p = new Prestamos_y_Bonificaciones();
+
+
+
+                            dn.Id_Empleado = Convert.ToInt32(row.Cells["Id"].Value.ToString());
+                            dn.IdNomina = Convert.ToInt32(t_IdNomina.Text);
+                            //   p.Meses = Convert.ToInt32(t_IdNomina.Text);
+                            dn.AFP = Convert.ToDecimal(row.Cells["AFP"].Value.ToString());
+                            dn.Seg_Med = Convert.ToDecimal(row.Cells["Seguro medico"].Value.ToString());
+                            dn.Sueldo_neto = Convert.ToDecimal(row.Cells["Sueldo neto"].Value.ToString());
+                            dn.Salario = Convert.ToDecimal(row.Cells["salario"].Value.ToString());
+
+                            dn.ISR = Convert.ToDecimal(row.Cells["Isr"].Value.ToString());
+                            dn.Otros = Convert.ToDecimal(row.Cells["Otros"].Value);
+                            p.Cuota1 = Convert.ToDecimal(row.Cells["Otros"].Value);
+                            if (p.Cuota1 > 0)
+                            {
+                                p.Cuenta = Convert.ToInt32(row.Cells["CuentaId"].Value);
+                                if (ProNomina.GuardarDetalleNomina(dn) > 0)
+                                    MessageBox.Show("la nomina se ha registrado correctamente");
+
+                                if (ProNomina.GuardarPrestamo(p) > 0)
+                                    MessageBox.Show("Prestamo");
+
+                            }
+                            else
+                            {
+                                if (ProNomina.GuardarDetalleNomina(dn) > 0)
+                                    MessageBox.Show("la nomina se ha registrado correctamente");
+
+                            }
+
+
+                        }
+
+
 
                     }
-
-
                 }
-            }
+                       
+       
+
+
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -409,6 +419,11 @@ namespace Sistema_de_Nomina.Presentacion
             {
                 e.Handled = true;
             }
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

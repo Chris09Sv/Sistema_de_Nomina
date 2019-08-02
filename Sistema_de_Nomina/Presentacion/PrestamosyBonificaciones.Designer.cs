@@ -43,15 +43,12 @@
             this.T_Nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.Empleados = new System.Windows.Forms.ToolStripMenuItem();
-            this.BusquedaEmpleado = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
+            this.T_NuevaCantidad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +56,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(653, 344);
+            this.label9.Location = new System.Drawing.Point(653, 335);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 18);
             this.label9.TabIndex = 35;
@@ -68,7 +65,7 @@
             // T_Interes
             // 
             this.T_Interes.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T_Interes.Location = new System.Drawing.Point(794, 340);
+            this.T_Interes.Location = new System.Drawing.Point(794, 332);
             this.T_Interes.Name = "T_Interes";
             this.T_Interes.Size = new System.Drawing.Size(61, 25);
             this.T_Interes.TabIndex = 28;
@@ -155,8 +152,9 @@
             this.T_Cantidad.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T_Cantidad.Location = new System.Drawing.Point(206, 268);
             this.T_Cantidad.Name = "T_Cantidad";
-            this.T_Cantidad.Size = new System.Drawing.Size(154, 25);
+            this.T_Cantidad.Size = new System.Drawing.Size(130, 25);
             this.T_Cantidad.TabIndex = 23;
+            this.T_Cantidad.Text = "0";
             // 
             // label2
             // 
@@ -191,39 +189,11 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(63)))), ((int)(((byte)(140)))));
             this.menuStrip1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Italic);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Empleados,
-            this.BusquedaEmpleado,
-            this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1050, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1050, 24);
             this.menuStrip1.TabIndex = 36;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // Empleados
-            // 
-            this.Empleados.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empleados.ForeColor = System.Drawing.Color.White;
-            this.Empleados.Name = "Empleados";
-            this.Empleados.Size = new System.Drawing.Size(166, 25);
-            this.Empleados.Text = "Nuevo Empleado";
-            // 
-            // BusquedaEmpleado
-            // 
-            this.BusquedaEmpleado.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BusquedaEmpleado.ForeColor = System.Drawing.Color.White;
-            this.BusquedaEmpleado.Name = "BusquedaEmpleado";
-            this.BusquedaEmpleado.Size = new System.Drawing.Size(182, 25);
-            this.BusquedaEmpleado.Text = "Buscar Empleados";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(65, 25);
-            this.salirToolStripMenuItem.Text = "Salir";
             // 
             // Button2
             // 
@@ -312,12 +282,23 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // T_NuevaCantidad
+            // 
+            this.T_NuevaCantidad.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_NuevaCantidad.Location = new System.Drawing.Point(355, 266);
+            this.T_NuevaCantidad.Name = "T_NuevaCantidad";
+            this.T_NuevaCantidad.Size = new System.Drawing.Size(85, 25);
+            this.T_NuevaCantidad.TabIndex = 143;
+            this.T_NuevaCantidad.Text = "0";
+            this.T_NuevaCantidad.Visible = false;
+            // 
             // PrestamosyBonificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1050, 518);
+            this.Controls.Add(this.T_NuevaCantidad);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button4);
@@ -338,11 +319,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.T_Nombre);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PrestamosyBonificaciones";
             this.Text = "PrestamosyBonificaciones";
             this.Load += new System.EventHandler(this.PrestamosyBonificaciones_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -365,13 +345,11 @@
         private System.Windows.Forms.TextBox T_Nombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem Empleados;
-        private System.Windows.Forms.ToolStripMenuItem BusquedaEmpleado;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Button Button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox T_NuevaCantidad;
     }
 }

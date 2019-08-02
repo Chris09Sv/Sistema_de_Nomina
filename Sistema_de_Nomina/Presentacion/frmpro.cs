@@ -78,6 +78,8 @@ namespace Sistema_de_Nomina.Presentacion
             btnNomina_Pago.Visible = false;
             btnCuentas_por_Cobrar.Visible = false;
             B_VerCuentas.Visible = false;
+            b_regalia.Visible = false;
+
         }
 
         private void btnRegistro_Click(object sender, EventArgs e)
@@ -91,6 +93,7 @@ namespace Sistema_de_Nomina.Presentacion
             btnNomina_Pago.Visible = false;
             btnCuentas_por_Cobrar.Visible = false;
             B_VerCuentas.Visible = false;
+            b_regalia.Visible = false;
 
         }
 
@@ -106,6 +109,8 @@ namespace Sistema_de_Nomina.Presentacion
             btnEmpleados.Visible = false;
             btnCuentas_por_Cobrar.Visible = true;
             B_VerCuentas.Visible = true;
+            b_regalia.Visible = false;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -118,7 +123,7 @@ namespace Sistema_de_Nomina.Presentacion
             btnUsuario.Visible = false;
             btnCuentas_por_Cobrar.Visible = false;
             B_VerCuentas.Visible = false; ;
-
+            b_regalia.Visible = true;
         }
 
         private void btnTazaDeducciones_Click(object sender, EventArgs e)
@@ -131,6 +136,8 @@ namespace Sistema_de_Nomina.Presentacion
             btnUsuario.Visible = false;
             btnCuentas_por_Cobrar.Visible = false;
             B_VerCuentas.Visible = true;
+            b_regalia.Visible = false;
+
 
         }
 
@@ -218,8 +225,10 @@ namespace Sistema_de_Nomina.Presentacion
              
             MantenimientoEmpleado empleado = new MantenimientoEmpleado();
             empleado.MdiParent = this;
-            empleado.Show();
-            
+            empleado.Show(); 
+            pbMenu_Click(null, null);
+
+
         }
 
         private void btnDepartamento_Click(object sender, EventArgs e)
@@ -256,9 +265,10 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void BtnEmpleado_Click(object sender, EventArgs e)
         {
-            NominaEmpleado es = new NominaEmpleado();
-            es.MdiParent = this;
-            es.Show();
+        //    NominaEmpleado es = new NominaEmpleado();
+        //    es.MdiParent = this;
+        //    es.Show();
+            pbMenu_Click(null, null);
         }
 
         private void BtnCuentas_por_Cobrar_Click(object sender, EventArgs e)
@@ -266,6 +276,21 @@ namespace Sistema_de_Nomina.Presentacion
             PrestamosyBonificaciones p = new PrestamosyBonificaciones();
             p.MdiParent = this;
             p.Show();
+            pbMenu_Click(null, null);
+
+        }
+
+        private void B_regalia_Click(object sender, EventArgs e)
+        {
+            Nomina13 n = new Nomina13();
+            n.MdiParent = this;
+            n.Show();
+            pbMenu_Click(null, null);
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

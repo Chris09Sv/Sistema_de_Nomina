@@ -8,6 +8,7 @@ namespace Sistema_de_Nomina.ModeloDeDatos
 {
    public class Prestamos_y_Bonificaciones
     {
+        private int id;
         private int IdEmpleado;
         private decimal Prestamo;
         private decimal Cuota;
@@ -24,5 +25,6 @@ namespace Sistema_de_Nomina.ModeloDeDatos
         public DateTime Fecha1 { get => Fecha; set => Fecha = value; }
         public decimal Interes1 { get => Interes; set => Interes = value; }
         public int Cuenta { get => cuenta; set => cuenta = value; }
+        public int Id { get => id; set => id = value; }
     }
 }
