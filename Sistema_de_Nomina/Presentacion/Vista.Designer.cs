@@ -57,7 +57,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(369, 443);
+            this.button2.Location = new System.Drawing.Point(320, 446);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 32);
             this.button2.TabIndex = 131;

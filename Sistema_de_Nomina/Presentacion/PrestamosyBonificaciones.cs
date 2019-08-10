@@ -44,7 +44,7 @@ namespace Sistema_de_Nomina.Presentacion
             }
 
         }
-        public static PrestamosyBonificaciones _instancia;
+        public static PrestamosyBonificaciones _instancia = null;
         public static PrestamosyBonificaciones GetInstancia()
         {
             if (_instancia == null)

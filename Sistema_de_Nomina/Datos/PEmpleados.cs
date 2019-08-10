@@ -97,7 +97,7 @@ namespace Sistema_de_Nomina.Datos
         {
             SqlParameter[] dbParametro = new SqlParameter[]
             {
-                                                Conexiones.MakeParam("@Id",SqlDbType.Int,0,empleado.Id),
+                    Conexiones.MakeParam("@Id",SqlDbType.Int,0,empleado.Id),
 
             };
 

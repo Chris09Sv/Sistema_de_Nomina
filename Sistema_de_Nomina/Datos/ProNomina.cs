@@ -21,6 +21,29 @@ namespace Sistema_de_Nomina.Datos
             return Conexiones.ExecuteDataSet("_Select_nomina_", dbparametro);
 
         }
+        public static DataSet Nomina13()
+        {
+            SqlParameter[] dbparametro = new SqlParameter[]
+                {
+
+                };
+            return Conexiones.ExecuteDataSet("_store_nomina_13_1", dbparametro);
+
+        }
+
+
+        public static DataSet SeleccionarNominaEmpleado(DetalleNomina d)
+        {
+            SqlParameter[] dbparametro = new SqlParameter[]
+                {
+                   Conexiones.MakeParam("@IdEmpleado",SqlDbType.Int,0,d.Id_Empleado),
+                   Conexiones.MakeParam("@idNomina",SqlDbType.Int,0,d.IdNomina)
+
+
+                };
+            return Conexiones.ExecuteDataSet("_Ver_Nomina_individual", dbparametro);
+
+        }
         public static DataSet VistaNomina()
         {
             SqlParameter[] dbparametro = new SqlParameter[]
@@ -71,11 +94,22 @@ namespace Sistema_de_Nomina.Datos
 
 
         }
-        public static DataSet ReporteTSS(Nomina nomina)
+        //public static DataSet ReporteTSS(Nomina nomina)
+        //{
+        //    SqlParameter[] dbparametro = new SqlParameter[]
+        //    {
+        // Conexiones.MakeParam("@Id",SqlDbType.Int,0,nomina.IdNomina)
+
+        //    };
+        //    return Conexiones.ExecuteDataSet("_Reporte_Tss", dbparametro);
+
+
+        //}
+        public static DataSet ReporteTSS()
         {
             SqlParameter[] dbparametro = new SqlParameter[]
             {
-         Conexiones.MakeParam("@Id",SqlDbType.Int,0,nomina.IdNomina)
+      //   Conexiones.MakeParam("@Id",SqlDbType.Int,0,nomina.IdNomina)
 
             };
             return Conexiones.ExecuteDataSet("_Reporte_Tss", dbparametro);

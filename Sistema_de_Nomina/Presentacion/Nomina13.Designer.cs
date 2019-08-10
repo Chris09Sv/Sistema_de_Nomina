@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CBX_Estatus = new System.Windows.Forms.TextBox();
             this.t_IdNomina = new System.Windows.Forms.TextBox();
@@ -46,45 +45,17 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.storenomina13BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sistema_de_NominaDataSet2 = new Sistema_de_Nomina.Sistema_de_NominaDataSet2();
             this.button1 = new System.Windows.Forms.Button();
             this.B_Guardar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.sistema_de_NominaDataSet = new Sistema_de_Nomina.Sistema_de_NominaDataSet();
-            this.storeVistanominaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.store_Vista_nominaTableAdapter = new Sistema_de_Nomina.Sistema_de_NominaDataSetTableAdapters.store_Vista_nominaTableAdapter();
-            this._store_nomina_13TableAdapter = new Sistema_de_Nomina.Sistema_de_NominaDataSet2TableAdapters._store_nomina_13TableAdapter();
-            this.sistema_de_NominaDataSet3 = new Sistema_de_Nomina.Sistema_de_NominaDataSet3();
-            this.storenomina13BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this._store_nomina_13TableAdapter1 = new Sistema_de_Nomina.Sistema_de_NominaDataSet3TableAdapters._store_nomina_13TableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sueldo13DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pAGOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storenomina13BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistema_de_NominaDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistema_de_NominaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storeVistanominaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistema_de_NominaDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storenomina13BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(63)))), ((int)(((byte)(140)))));
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1282, 24);
-            this.menuStrip1.TabIndex = 21;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // panel1
             // 
@@ -100,10 +71,10 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1282, 122);
+            this.panel1.Size = new System.Drawing.Size(1062, 122);
             this.panel1.TabIndex = 23;
             // 
             // CBX_Estatus
@@ -149,6 +120,7 @@
             this.T_Dollar.Name = "T_Dollar";
             this.T_Dollar.Size = new System.Drawing.Size(202, 25);
             this.T_Dollar.TabIndex = 8;
+            this.T_Dollar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.T_Dollar_KeyPress);
             // 
             // label4
             // 
@@ -182,9 +154,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sistema_de_Nomina.Properties.Resources.download__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(880, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(852, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(373, 110);
+            this.pictureBox1.Size = new System.Drawing.Size(198, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 139;
             this.pictureBox1.TabStop = false;
@@ -197,72 +169,55 @@
             this.panel2.Controls.Add(this.B_Guardar);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(7, 154);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 122);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1275, 528);
+            this.panel2.Size = new System.Drawing.Size(1062, 490);
             this.panel2.TabIndex = 24;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(105)))), ((int)(((byte)(162)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(63)))), ((int)(((byte)(140)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(63)))), ((int)(((byte)(140)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.sueldo13DataGridViewTextBoxColumn,
-            this.pAGOSDataGridViewTextBoxColumn,
-            this.salarioDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.storenomina13BindingSource1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(63)))), ((int)(((byte)(140)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(63)))), ((int)(((byte)(140)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.Location = new System.Drawing.Point(5, 38);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(63)))), ((int)(((byte)(140)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(63)))), ((int)(((byte)(140)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.Size = new System.Drawing.Size(1250, 303);
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridView1.Size = new System.Drawing.Size(1054, 303);
             this.dataGridView1.TabIndex = 139;
-            // 
-            // storenomina13BindingSource
-            // 
-            this.storenomina13BindingSource.DataMember = "_store_nomina_13";
-            this.storenomina13BindingSource.DataSource = this.sistema_de_NominaDataSet2;
-            // 
-            // sistema_de_NominaDataSet2
-            // 
-            this.sistema_de_NominaDataSet2.DataSetName = "Sistema_de_NominaDataSet2";
-            this.sistema_de_NominaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -325,83 +280,18 @@
             this.textBox1.TabIndex = 13;
             this.textBox1.Visible = false;
             // 
-            // sistema_de_NominaDataSet
+            // errorProvider1
             // 
-            this.sistema_de_NominaDataSet.DataSetName = "Sistema_de_NominaDataSet";
-            this.sistema_de_NominaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // storeVistanominaBindingSource
-            // 
-            this.storeVistanominaBindingSource.DataMember = "store_Vista_nomina";
-            this.storeVistanominaBindingSource.DataSource = this.sistema_de_NominaDataSet;
-            // 
-            // store_Vista_nominaTableAdapter
-            // 
-            this.store_Vista_nominaTableAdapter.ClearBeforeFill = true;
-            // 
-            // _store_nomina_13TableAdapter
-            // 
-            this._store_nomina_13TableAdapter.ClearBeforeFill = true;
-            // 
-            // sistema_de_NominaDataSet3
-            // 
-            this.sistema_de_NominaDataSet3.DataSetName = "Sistema_de_NominaDataSet3";
-            this.sistema_de_NominaDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // storenomina13BindingSource1
-            // 
-            this.storenomina13BindingSource1.DataMember = "_store_nomina_13";
-            this.storenomina13BindingSource1.DataSource = this.sistema_de_NominaDataSet3;
-            // 
-            // _store_nomina_13TableAdapter1
-            // 
-            this._store_nomina_13TableAdapter1.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sueldo13DataGridViewTextBoxColumn
-            // 
-            this.sueldo13DataGridViewTextBoxColumn.DataPropertyName = "Sueldo #13";
-            this.sueldo13DataGridViewTextBoxColumn.HeaderText = "Regalia";
-            this.sueldo13DataGridViewTextBoxColumn.Name = "sueldo13DataGridViewTextBoxColumn";
-            this.sueldo13DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pAGOSDataGridViewTextBoxColumn
-            // 
-            this.pAGOSDataGridViewTextBoxColumn.DataPropertyName = "PAGOS";
-            this.pAGOSDataGridViewTextBoxColumn.HeaderText = "Meses trabajados";
-            this.pAGOSDataGridViewTextBoxColumn.Name = "pAGOSDataGridViewTextBoxColumn";
-            this.pAGOSDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // salarioDataGridViewTextBoxColumn
-            // 
-            this.salarioDataGridViewTextBoxColumn.DataPropertyName = "Salario";
-            this.salarioDataGridViewTextBoxColumn.HeaderText = "Salario";
-            this.salarioDataGridViewTextBoxColumn.Name = "salarioDataGridViewTextBoxColumn";
-            this.salarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.errorProvider1.ContainerControl = this;
             // 
             // Nomina13
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1282, 746);
+            this.ClientSize = new System.Drawing.Size(1062, 612);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Nomina13";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -413,19 +303,12 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storenomina13BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistema_de_NominaDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistema_de_NominaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storeVistanominaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistema_de_NominaDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storenomina13BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox CBX_Estatus;
         private System.Windows.Forms.TextBox t_IdNomina;
@@ -441,20 +324,7 @@
         private System.Windows.Forms.Button B_Guardar;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private Sistema_de_NominaDataSet sistema_de_NominaDataSet;
-        private System.Windows.Forms.BindingSource storeVistanominaBindingSource;
-        private Sistema_de_NominaDataSetTableAdapters.store_Vista_nominaTableAdapter store_Vista_nominaTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private Sistema_de_NominaDataSet2 sistema_de_NominaDataSet2;
-        private System.Windows.Forms.BindingSource storenomina13BindingSource;
-        private Sistema_de_NominaDataSet2TableAdapters._store_nomina_13TableAdapter _store_nomina_13TableAdapter;
-        private Sistema_de_NominaDataSet3 sistema_de_NominaDataSet3;
-        private System.Windows.Forms.BindingSource storenomina13BindingSource1;
-        private Sistema_de_NominaDataSet3TableAdapters._store_nomina_13TableAdapter _store_nomina_13TableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sueldo13DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pAGOSDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

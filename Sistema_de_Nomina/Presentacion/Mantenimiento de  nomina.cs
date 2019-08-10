@@ -29,9 +29,10 @@ namespace Sistema_de_Nomina.Presentacion
         public int ultima_nomina;
         private void Mantenimiento_de__nomina_Load(object sender, EventArgs e)
         {
-            Nomina n = new Nomina();
+            Datos.Nomina n = new Datos.Nomina();
             string dc = "Nomina";
             string d1 ="base";
+            comboBox2.Visible = true;
             try
             {
                 DataSet ds = ProNomina.SeleccionarIdNomina();
@@ -53,7 +54,7 @@ namespace Sistema_de_Nomina.Presentacion
         }
         public void Valores(double input)
         {
-            Nomina n = new Nomina();
+            Datos.Nomina n = new Datos.Nomina();
             string dc = "Nomina";
            
             try
@@ -114,7 +115,7 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void B_GenerarNomina_Click(object sender, EventArgs e)
         {
-            Nomina n = new Nomina();
+            Datos.Nomina n = new Datos.Nomina();
             if (T_Dollar.Text == "0")
                 T_Dollar.Text = "1";
              
@@ -233,19 +234,24 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void B_Guardar_Click(object sender, EventArgs e)
         {
-               Nomina n = new Nomina();
-         
-
-            n.Dollar = Convert.ToDecimal(T_Dollar.Text);
-
-            n.Usuario1 = Convert.ToInt32(T_Usuario.Text);
-            n.Estatus1 = "Nomina Cerrada";
-            n.Fecha1 = DateTime.Today;
-            n.Fecha2 = DTP_FechaNomina.Value;
             // ProNomina.GuardarNomina(n);
-
-               if( MessageBox.Show("Esta seguro que desea cerrar la nomina #"+ DateTime.Today.Month+"? ",  "Registrar Nomina " , MessageBoxButtons.OKCancel, MessageBoxIcon.Hand) == DialogResult.OK)
+            if(T_Dollar.Text=="" || string.IsNullOrEmpty(T_Dollar.Text))
+            {
+                MessageBox.Show("Por favor ingrese la tasa de cambio para calcular el ISR y mostrar todos los valores");
+                
+            }
+            else if( MessageBox.Show("Esta seguro que desea cerrar la nomina #"+ DateTime.Today.Month+"? ",  "Registrar Nomina " , MessageBoxButtons.OKCancel, MessageBoxIcon.Hand) == DialogResult.OK)
                 {
+
+                Datos.Nomina n = new Datos.Nomina();
+                {
+                    n.Dollar = Convert.ToDecimal(T_Dollar.Text);
+
+                    n.Usuario1 = Convert.ToInt32(T_Usuario.Text);
+                    n.Estatus1 = "Nomina Cerrada";
+                    n.Fecha1 = DateTime.Today;
+                    n.Fecha2 = DTP_FechaNomina.Value;
+                };
                     if (ultima_nomina <=25)
                     {
                         MessageBox.Show("La ultima nomina fue registrada hace: " + ultima_nomina + "dias");
@@ -364,7 +370,7 @@ namespace Sistema_de_Nomina.Presentacion
             try
             {
                 DataView dv = new DataView(dt.Copy());
-                dv.RowFilter = comboBox1.Text + " Like '%" + textBox1.Text + "%'";
+                dv.RowFilter = comboBox2.Text + " Like '%" + textBox2.Text + "%'";
                 dataGridView1.DataSource = dv;
             }
             catch
@@ -422,6 +428,51 @@ namespace Sistema_de_Nomina.Presentacion
         }
 
         private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void T_Dollar_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void T_Dollar_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            ValidarCampo.soloNumerosDecimales(T_Dollar, e, errorProvider1 );
+        }
+
+        private void FToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+         //   groupBox1.Hide();
+            groupBox2.Show();
+            Form1 f = new Form1();
+            f.AbrirHijo(new BusquedaNomina());
+         //   this.Close();
+        }
+
+        private void ReceptorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            BusquedaNomina b = new BusquedaNomina();
+            f.receptor(b);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            groupBox1.Show();
+
+        // groupBox2.Hide();
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
         {
 
         }

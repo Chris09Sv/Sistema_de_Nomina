@@ -223,17 +223,30 @@ namespace Sistema_de_Nomina.Presentacion
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
              
-            MantenimientoEmpleado empleado = new MantenimientoEmpleado();
+            MantenimientoEmpleado empleado =  MantenimientoEmpleado.GetInstancia();
             empleado.MdiParent = this;
-            empleado.Show(); 
+            empleado.Show();
+         
             pbMenu_Click(null, null);
+
+          //  this.pnMenu.Enabled = false;
+            //if (empleado.IsDisposed)
+            //{
+            //    MantenimientoEmpleado emplead = new MantenimientoEmpleado(); emplead.Show();
+            //}
+            //else
+            //{
+            //    empleado.Show();
+
+
+            //  
 
 
         }
 
         private void btnDepartamento_Click(object sender, EventArgs e)
         {
-            MantenimientoDepartamento m = new MantenimientoDepartamento();
+            MantenimientoDepartamento m =new  MantenimientoDepartamento();
             m.MdiParent = this;
             m.Show();
            
@@ -245,13 +258,22 @@ namespace Sistema_de_Nomina.Presentacion
 
 
         }
-
+        Mantenimiento_de__nomina ct;
         private void btnNomina_Pago_Click(object sender, EventArgs e)
         {
-            Mantenimiento_de__nomina m = new Mantenimiento_de__nomina();
-            m.MdiParent = this;
-            m.Show();
-            pbMenu_Click(null, null);
+            //Mantenimiento_de__nomina m = new Mantenimiento_de__nomina();
+            //m.MdiParent = this;
+            //m.Show();
+            //pbMenu_Click(null, null);
+            ct = new Mantenimiento_de__nomina();
+            ct.MdiParent = this;
+            ct.FormClosed += new FormClosedEventHandler(ct_FormClosed);
+            ct.Show();
+        }
+
+         void ct_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ct = null;
         }
 
         private void BtnHistorial_Click(object sender, EventArgs e)
@@ -273,19 +295,23 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void BtnCuentas_por_Cobrar_Click(object sender, EventArgs e)
         {
-            PrestamosyBonificaciones p = new PrestamosyBonificaciones();
+            PrestamosyBonificaciones p = PrestamosyBonificaciones.GetInstancia();
             p.MdiParent = this;
             p.Show();
             pbMenu_Click(null, null);
 
         }
-
+        Nomina13 n;
         private void B_regalia_Click(object sender, EventArgs e)
         {
-            Nomina13 n = new Nomina13();
-            n.MdiParent = this;
-            n.Show();
-            pbMenu_Click(null, null);
+            if (n == null)
+            {
+
+                 n = new Nomina13();
+                n.MdiParent = this;
+                n.Show();
+                pbMenu_Click(null, null);
+            }
         }
 
         private void Button2_Click(object sender, EventArgs e)

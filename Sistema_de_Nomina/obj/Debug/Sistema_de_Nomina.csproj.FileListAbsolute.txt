@@ -127,3 +127,5 @@ C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\Sistema_de_Nomina\obj\Deb
 C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.pdb
 C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.frmpro.resources
 C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.Nomina13.resources
+C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Form1.resources
+C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\Sistema_de_Nomina\obj\Debug\Sistema_de_Nomina.Presentacion.Nomina.ContenedorDeNominas.resources

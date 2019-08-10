@@ -51,6 +51,7 @@
     <Compile Include="Datos\Conexiones.cs" />
     <Compile Include="Datos\Deducciones.cs" />
     <Compile Include="Datos\PrPrestamos_Y_Bonificaciones.cs" />
+    <Compile Include="ModeloDeDatos\Entrada de datos.cs" />
     <Compile Include="ModeloDeDatos\Ndeducciones.cs" />
     <Compile Include="ModeloDeDatos\Nomina.cs" />
     <Compile Include="Datos\PEmpleados.cs" />
@@ -84,6 +85,12 @@
       <DependentUpon>DescuentosPorLey.cs</DependentUpon>
     </Compile>
     <Compile Include="ModeloDeDatos\Empleados.cs" />
+    <Compile Include="Presentacion\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Frm-TazaDeduciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +145,12 @@
     <Compile Include="Presentacion\NominaEmpleado.Designer.cs">
       <DependentUpon>NominaEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\ContenedorDeNominas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ContenedorDeNominas.Designer.cs">
+      <DependentUpon>ContenedorDeNominas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\PrestamosyBonificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +203,9 @@
     <EmbeddedResource Include="Presentacion\DescuentosPorLey.resx">
       <DependentUpon>DescuentosPorLey.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Frm-TazaDeduciones.resx">
       <DependentUpon>Frm-TazaDeduciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\NominaEmpleado.resx">
       <DependentUpon>NominaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ContenedorDeNominas.resx">
+      <DependentUpon>ContenedorDeNominas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PrestamosyBonificaciones.resx">
       <DependentUpon>PrestamosyBonificaciones.cs</DependentUpon>
@@ -295,6 +314,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-coin-3-240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-coin-3-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-coin-3-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-coin-3-48 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-banknote-11-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-time-17-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-user-20-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-gear-11-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-arrow-76-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-arrow-76-481.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

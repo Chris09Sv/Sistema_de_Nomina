@@ -23,6 +23,7 @@ namespace Sistema_de_Nomina.Datos
 
         }
 
+
         public static DataSet VistaPosicion()
         {
             SqlParameter[] dbparametro = new SqlParameter[]
@@ -111,5 +112,34 @@ namespace Sistema_de_Nomina.Datos
 
             return Convert.ToInt32(Conexiones.ExecuteScalar("store_Eliminar_Posicion", dbParametro));
         }
+
+        public static int ValidarDepartamento(Departamentos departamentos)
+        {
+            SqlParameter[] dbparametro = new SqlParameter[]
+            {
+             Conexiones.MakeParam("@Departamento",SqlDbType.VarChar,0,departamentos.Departamento)
+
+            };
+          //  return Conexiones.ExecuteDataSet("store_Validar_Departamento", dbparametro);
+
+            return Convert.ToInt32(Conexiones.ExecuteScalar("store_Validar_Departamento", dbparametro));
+
+        }
+        public static int ValidarPuesto(Posiciones posiciones)
+        {
+            SqlParameter[] dbparametro = new SqlParameter[]
+            {
+                             Conexiones.MakeParam("@Departamento",SqlDbType.Int,0,posiciones.IdDepartamento),
+                              Conexiones.MakeParam("@posicion",SqlDbType.VarChar,0,posiciones.Posicion)
+
+
+
+            };
+            //  return Conexiones.ExecuteDataSet("store_Validar_Departamento", dbparametro);
+
+            return Convert.ToInt32(Conexiones.ExecuteScalar("store_Validar_Puesto", dbparametro));
+
+        }
     }
+
 }
