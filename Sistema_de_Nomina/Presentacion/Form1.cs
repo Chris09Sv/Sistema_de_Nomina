@@ -13,9 +13,9 @@ using Sistema_de_Nomina.Presentacion.Nomina;
 
 namespace Sistema_de_Nomina
 {
-    public partial class Form1 : Form
+    public partial class Panel : Form
     {
-        public Form1()
+        public Panel()
         {
             InitializeComponent();
         }
@@ -181,12 +181,27 @@ namespace Sistema_de_Nomina
 
         private void Button6_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new PrestamosyBonificaciones());
+        //    AbrirFormHija(new PrestamosyBonificaciones());
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             AbrirFormHija(new DescuentosPorLey());
+        }
+
+        private void Button2_Click_1(object sender, EventArgs e)
+        {
+        }
+
+        private void Button4_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormHija(new PrestamosyBonificaciones());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Frm_Usuario());
+
         }
     }
 }

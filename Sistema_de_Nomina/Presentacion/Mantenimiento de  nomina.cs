@@ -273,8 +273,10 @@ namespace Sistema_de_Nomina.Presentacion
 
                             dn.Id_Empleado = Convert.ToInt32(row.Cells["Id"].Value.ToString());
                             dn.IdNomina = Convert.ToInt32(t_IdNomina.Text);
-                            //   p.Meses = Convert.ToInt32(t_IdNomina.Text);
-                            dn.AFP = Convert.ToDecimal(row.Cells["AFP"].Value.ToString());
+                        p.Meses = Convert.ToInt32(t_IdNomina.Text);
+
+                        //   p.Meses = Convert.ToInt32(t_IdNomina.Text);
+                        dn.AFP = Convert.ToDecimal(row.Cells["AFP"].Value.ToString());
                             dn.Seg_Med = Convert.ToDecimal(row.Cells["Seguro medico"].Value.ToString());
                             dn.Sueldo_neto = Convert.ToDecimal(row.Cells["Sueldo neto"].Value.ToString());
                             dn.Salario = Convert.ToDecimal(row.Cells["salario"].Value.ToString());
@@ -282,14 +284,14 @@ namespace Sistema_de_Nomina.Presentacion
                             dn.ISR = Convert.ToDecimal(row.Cells["Isr"].Value.ToString());
                             dn.Otros = Convert.ToDecimal(row.Cells["Otros"].Value);
                             p.Cuota1 = Convert.ToDecimal(row.Cells["Otros"].Value);
-                            if (p.Cuota1 > 0)
-                            {
-                                p.Cuenta = Convert.ToInt32(row.Cells["CuentaId"].Value);
-                                if (ProNomina.GuardarDetalleNomina(dn) > 0)
-                                    MessageBox.Show("la nomina se ha registrado correctamente");
+                        //p.Cuota1 =
 
-                                if (ProNomina.GuardarPrestamo(p) > 0)
-                                    MessageBox.Show("Prestamo");
+                        if (p.Cuota1 > 0)
+                            {
+                            p.Cuenta = Convert.ToInt32(row.Cells["CuentaId"].Value);
+                            ProNomina.GuardarDetalleNomina(dn);
+                            ProNomina.GuardarPrestamo(p);
+                                   
 
                             }
                             else
@@ -447,14 +449,14 @@ namespace Sistema_de_Nomina.Presentacion
 
          //   groupBox1.Hide();
             groupBox2.Show();
-            Form1 f = new Form1();
+            Panel f = new Panel();
             f.AbrirHijo(new BusquedaNomina());
          //   this.Close();
         }
 
         private void ReceptorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            Panel f = new Panel();
             BusquedaNomina b = new BusquedaNomina();
             f.receptor(b);
         }

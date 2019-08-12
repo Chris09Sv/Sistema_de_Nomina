@@ -25,7 +25,7 @@ namespace Sistema_de_Nomina.Presentacion
 
         public void setEmpleao(string cuenta,string Id,string Nombre, string apellido, string salario,string Cantidad)
         {
-            MessageBox.Show(cuenta);
+           // MessageBox.Show(cuenta);
             if (cuenta == "" || string.IsNullOrWhiteSpace(cuenta))
             {
                 CuentaP = 0;
@@ -64,13 +64,9 @@ namespace Sistema_de_Nomina.Presentacion
         private bool flag = false;
         private void Button1_Click(object sender, EventArgs e)
         {
-            frmpro fm = new frmpro();
+            // frmpro fm = new frmpro();
 
-            Vista m = new Vista();
-
-            m.setFlag(true);
-            Hide();
-            m.ShowDialog();
+       
 
             //PrestamosyBonificaciones p = new PrestamosyBonificaciones();
             //p.MdiParent = this;
@@ -182,6 +178,89 @@ namespace Sistema_de_Nomina.Presentacion
             {
                 e.Handled = true;
             }
+
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            groupBox1.Hide();
+            groupBox2.Show();
+        }
+        private DataTable dt;
+        private void B_Buscar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Hide();
+            groupBox2.Show();
+            try
+            {
+                DataSet ds = PEmpleados.VistaPrestamo();
+                dt = ds.Tables[0];
+                DgvEmpleados.DataSource = dt;
+                DgvEmpleados.Columns["Id"].Visible = false;
+                DgvEmpleados.Columns["cuenta"].Visible = false;
+
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataGridViewRow row in DgvEmpleados.Rows)
+
+                        if (string.IsNullOrEmpty(row.Cells["balance"].Value.ToString()))
+                            row.Cells["balance"].Value = 0;
+                }
+                else
+                {
+
+                }
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message + Error.StackTrace);
+            }
+
+        }
+
+        private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void Button1_Click_2(object sender, EventArgs e)
+        {
+            
+                setEmpleao(
+                    DgvEmpleados.CurrentRow.Cells["cuenta"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["Id"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["Nombre"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["Apellido"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["Salario"].Value.ToString(),
+                    DgvEmpleados.CurrentRow.Cells["balance"].Value.ToString()
+
+
+                    );
+            groupBox1.Show();
+            groupBox2.Hide();
+                // p.Enabled = true;
+                //  
+               //.Show();               // MessageBox.Show(" ");
+
+                //Hide();
+            
+        }
+
+        private void T_Salario_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void T_Cantidad_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
+        //    ValidarCampo.charSoloNumeros(T_Cantidad, e,  L_Cantidad, errorProvider1);
+            ValidarCampo.soloNumerosDecimales(T_Cantidad, e, errorProvider1);
+
+        }
+
+        private void T_NuevaCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarCampo.soloNumerosDecimales(T_NuevaCantidad, e,   errorProvider1);
 
         }
     }

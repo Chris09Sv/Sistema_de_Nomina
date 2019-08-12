@@ -153,6 +153,16 @@ namespace Sistema_de_Nomina.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_coin_3_48__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-coin-3-48 (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconmonstr_gear_11_48 {
             get {
                 object obj = ResourceManager.GetObject("iconmonstr-gear-11-48", resourceCulture);

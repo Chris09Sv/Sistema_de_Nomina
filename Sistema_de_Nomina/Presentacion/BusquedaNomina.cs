@@ -107,52 +107,66 @@ namespace Sistema_de_Nomina.Presentacion
             BusquedaNomina_Load(null, null);
          //  B_Salir.Enabled = true;
             B_Eliminar.Enabled = true;
+            B_verNomina.Enabled = true;
 
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Seguro.Text = "";
-            try
+            if (dataGridView1.CurrentRow != null)
             {
-                Datos.Nomina n = new Datos.Nomina();
-                n.IdNomina = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString());
-///                idnomina = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString());
 
-                DataSet ds = Datos.ProNomina.ReporteTSS();
-                dt = ds.Tables[0];
-                dataGridView1.DataSource = dt;
 
-                GrupoMostrarNomina.Show();
-                dataGridView1.Columns["Id"].Visible = false;
-
-                b_volver.Enabled = true;
-             //   B_Salir.Enabled = true;
-                B_Eliminar.Enabled = false;
-                B_verNomina.Enabled = false;
-                foreach(DataGridViewRow row in dataGridView1.Rows)
+                Seguro.Text = "";
+                try
                 {
 
-                    //double total = Convert.ToDouble(row.Cells["Sueldo Neto"].Value) - Convert.ToDouble(row.Cells["Otros"].Value);
-                    //decimal.Round(calculo_isr, 2, MidpointRounding.AwayFromZero);
+                    Datos.Nomina n = new Datos.Nomina();
+                    n.IdNomina = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString());
+                    ///                idnomina = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString());
 
-                    count_Afp += Convert.ToDecimal(row.Cells["AFP"].Value);
-                count_SRl += Convert.ToDecimal(row.Cells["SRL"].Value);
-                count_Seg += Convert.ToDecimal(row.Cells["Seguro Familiar de Salud"].Value);
-                count_Infotep += Convert.ToDecimal(row.Cells["Infotep"].Value);
-                   
+                    DataSet ds = Datos.ProNomina.ReporteTSS();
+                    dt = ds.Tables[0];
+                    dataGridView1.DataSource = dt;
+
+                    GrupoMostrarNomina.Show();
+                    dataGridView1.Columns["Id"].Visible = false;
+
+                    b_volver.Enabled = true;
+                    //   B_Salir.Enabled = true;
+                    B_Eliminar.Enabled = false;
+                    B_verNomina.Enabled = false;
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+
+                        //double total = Convert.ToDouble(row.Cells["Sueldo Neto"].Value) - Convert.ToDouble(row.Cells["Otros"].Value);
+                        //decimal.Round(calculo_isr, 2, MidpointRounding.AwayFromZero);
+
+                        count_Afp += Convert.ToDecimal(row.Cells["AFP"].Value);
+                        count_SRl += Convert.ToDecimal(row.Cells["SRL"].Value);
+                        count_Seg += Convert.ToDecimal(row.Cells["Seguro Familiar de Salud"].Value);
+                        count_Infotep += Convert.ToDecimal(row.Cells["Infotep"].Value);
+
+                    }
+                    //Seguro.Text = "Seguro de Salud $$" + count_Seg;
+                    //AFP.Text = "AFP $$" + count_Afp;
+                    //SRL.Text = "Seguro de Riesgos laborales $$" + count_SRl;
+                    //Infotep.Text = " Infotep $$" + count_Infotep;
+
+                    //  b_volver.Enabled = false;
                 }
-                //Seguro.Text = "Seguro de Salud $$" + count_Seg;
-                //AFP.Text = "AFP $$" + count_Afp;
-                //SRL.Text = "Seguro de Riesgos laborales $$" + count_SRl;
-                //Infotep.Text = " Infotep $$" + count_Infotep;
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message + error.StackTrace);
+                }
 
-              //  b_volver.Enabled = false;
             }
-            catch (Exception error)
+            else
             {
-                MessageBox.Show(error.Message + error.StackTrace);
+                MessageBox.Show("Por Favor, seleccione una nomina para ver el reporte de pago a la Tss", "Reporte de pago a Tss", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
+
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -270,6 +284,10 @@ namespace Sistema_de_Nomina.Presentacion
 
                 GrupoMostrarNomina.Hide();
                 groupBox1.Show();
+            }
+            else
+            {
+                MessageBox.Show("Por Favor, seleccione un empleado para ver reporte de pago", "Reporte de pago", MessageBoxButtons.OK,MessageBoxIcon.Information );
             }
 
         }

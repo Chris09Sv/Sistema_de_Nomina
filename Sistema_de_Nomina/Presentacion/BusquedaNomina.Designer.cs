@@ -34,6 +34,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BusquedaNomina));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.B_verNomina = new System.Windows.Forms.Button();
             this.b_volver = new System.Windows.Forms.Button();
             this.B_Eliminar = new System.Windows.Forms.Button();
@@ -47,6 +50,7 @@
             this.SRL = new System.Windows.Forms.Label();
             this.Infotep = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnsalir = new System.Windows.Forms.PictureBox();
             this.L_Descuentos = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.L_Neto = new System.Windows.Forms.Label();
@@ -60,6 +64,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.L_Nombre = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.L_Cargo = new System.Windows.Forms.Label();
             this.L_Departamento = new System.Windows.Forms.Label();
@@ -69,25 +74,21 @@
             this.B_GenerarNomina = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.L_NoNomina = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.L_Fecha = new System.Windows.Forms.Label();
-            this.L_Nombre = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnsalir = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.GrupoMostrarNomina.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -105,6 +106,39 @@
             this.panel1.Size = new System.Drawing.Size(1056, 147);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(412, 40);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 19);
+            this.label4.TabIndex = 154;
+            this.label4.Text = "Rnc: 130025347";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(330, 9);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(338, 24);
+            this.label5.TabIndex = 155;
+            this.label5.Text = "DCR, LLC-COLORADO ROCKIES";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Sistema_de_Nomina.Properties.Resources.download__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(864, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(183, 110);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 148;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // B_verNomina
             // 
@@ -327,6 +361,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter_1);
             // 
+            // btnsalir
+            // 
+            this.btnsalir.BackColor = System.Drawing.Color.White;
+            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
+            this.btnsalir.Location = new System.Drawing.Point(6, 1);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(48, 48);
+            this.btnsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnsalir.TabIndex = 155;
+            this.btnsalir.TabStop = false;
+            this.btnsalir.Click += new System.EventHandler(this.Btnsalir_Click);
+            // 
             // L_Descuentos
             // 
             this.L_Descuentos.AutoSize = true;
@@ -459,6 +506,16 @@
             this.panel4.Size = new System.Drawing.Size(1056, 124);
             this.panel4.TabIndex = 153;
             // 
+            // L_Nombre
+            // 
+            this.L_Nombre.AutoSize = true;
+            this.L_Nombre.Location = new System.Drawing.Point(23, 7);
+            this.L_Nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.L_Nombre.Name = "L_Nombre";
+            this.L_Nombre.Size = new System.Drawing.Size(71, 21);
+            this.L_Nombre.TabIndex = 160;
+            this.L_Nombre.Text = "Nombre";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -537,6 +594,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.L_NoNomina);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
@@ -551,108 +609,63 @@
             // L_NoNomina
             // 
             this.L_NoNomina.AutoSize = true;
-            this.L_NoNomina.Location = new System.Drawing.Point(16, 61);
+            this.L_NoNomina.Location = new System.Drawing.Point(46, 34);
             this.L_NoNomina.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.L_NoNomina.Name = "L_NoNomina";
             this.L_NoNomina.Size = new System.Drawing.Size(100, 21);
             this.L_NoNomina.TabIndex = 154;
             this.L_NoNomina.Text = "Nomina No:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(410, 47);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 21);
-            this.label3.TabIndex = 153;
-            this.label3.Text = "Rnc: 130025347";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(377, 10);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(347, 10);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(291, 21);
+            this.label2.Size = new System.Drawing.Size(338, 24);
             this.label2.TabIndex = 153;
             this.label2.Text = "DCR, LLC-COLORADO ROCKIES";
             // 
             // L_Fecha
             // 
             this.L_Fecha.AutoSize = true;
-            this.L_Fecha.Location = new System.Drawing.Point(16, 25);
+            this.L_Fecha.Location = new System.Drawing.Point(58, 3);
             this.L_Fecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.L_Fecha.Name = "L_Fecha";
             this.L_Fecha.Size = new System.Drawing.Size(55, 21);
             this.L_Fecha.TabIndex = 149;
             this.L_Fecha.Text = "Fecha";
             // 
-            // L_Nombre
-            // 
-            this.L_Nombre.AutoSize = true;
-            this.L_Nombre.Location = new System.Drawing.Point(23, 7);
-            this.L_Nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.L_Nombre.Name = "L_Nombre";
-            this.L_Nombre.Size = new System.Drawing.Size(71, 21);
-            this.L_Nombre.TabIndex = 160;
-            this.L_Nombre.Text = "Nombre";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(412, 40);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 19);
-            this.label4.TabIndex = 154;
-            this.label4.Text = "Rnc: 130025347";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(330, 9);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(338, 24);
-            this.label5.TabIndex = 155;
-            this.label5.Text = "DCR, LLC-COLORADO ROCKIES";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sistema_de_Nomina.Properties.Resources.download__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(847, -6);
+            this.pictureBox1.Location = new System.Drawing.Point(864, 10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 110);
+            this.pictureBox1.Size = new System.Drawing.Size(183, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 151;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // label3
             // 
-            this.pictureBox2.Image = global::Sistema_de_Nomina.Properties.Resources.download__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(864, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(183, 110);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 148;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(443, 34);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 21);
+            this.label3.TabIndex = 153;
+            this.label3.Text = "Rnc: 130025347";
             // 
-            // btnsalir
+            // label1
             // 
-            this.btnsalir.BackColor = System.Drawing.Color.White;
-            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
-            this.btnsalir.Location = new System.Drawing.Point(6, 1);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(48, 48);
-            this.btnsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnsalir.TabIndex = 155;
-            this.btnsalir.TabStop = false;
-            this.btnsalir.Click += new System.EventHandler(this.Btnsalir_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(400, 61);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 21);
+            this.label1.TabIndex = 155;
+            this.label1.Text = "Volante de pago de nomina";
             // 
             // BusquedaNomina
             // 
@@ -674,18 +687,18 @@
             this.Load += new System.EventHandler(this.BusquedaNomina_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.GrupoMostrarNomina.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -717,7 +730,6 @@
         private System.Windows.Forms.Button B_GenerarNomina;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label L_NoNomina;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label L_Fecha;
         private System.Windows.Forms.Label label20;
@@ -738,5 +750,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox btnsalir;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }

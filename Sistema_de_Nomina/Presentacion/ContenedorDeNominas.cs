@@ -68,5 +68,12 @@ namespace Sistema_de_Nomina.Presentacion.Nomina
             AbrirHijo(new Mantenimiento_de__nomina());
 
         }
+
+        private void PuestosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta Seguro de que desea salir de seccion?", "Salir ", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                this.Close();
+
+        }
     }
 }

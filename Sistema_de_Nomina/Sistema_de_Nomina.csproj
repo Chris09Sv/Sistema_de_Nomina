@@ -50,8 +50,11 @@
   <ItemGroup>
     <Compile Include="Datos\Conexiones.cs" />
     <Compile Include="Datos\Deducciones.cs" />
+    <Compile Include="Datos\DUsuario.cs" />
+    <Compile Include="Datos\Plogin.cs" />
     <Compile Include="Datos\PrPrestamos_Y_Bonificaciones.cs" />
     <Compile Include="ModeloDeDatos\Entrada de datos.cs" />
+    <Compile Include="ModeloDeDatos\Login.cs" />
     <Compile Include="ModeloDeDatos\Ndeducciones.cs" />
     <Compile Include="ModeloDeDatos\Nomina.cs" />
     <Compile Include="Datos\PEmpleados.cs" />
@@ -102,6 +105,18 @@
     </Compile>
     <Compile Include="Presentacion\frmpro.designer.cs">
       <DependentUpon>frmpro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Log\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Log\Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Log\Frm_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Log\Frm_Usuario.Designer.cs">
+      <DependentUpon>Frm_Usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Mantenimiento de  nomina.cs">
       <SubType>Form</SubType>
@@ -211,6 +226,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmpro.resx">
       <DependentUpon>frmpro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Log\Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Log\Frm_Usuario.resx">
+      <DependentUpon>Frm_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Mantenimiento de  nomina.resx">
       <DependentUpon>Mantenimiento de  nomina.cs</DependentUpon>
@@ -344,6 +365,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconmonstr-arrow-76-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-coin-3-48 %282%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
