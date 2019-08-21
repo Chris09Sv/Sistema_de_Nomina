@@ -34,9 +34,7 @@ namespace Sistema_de_Nomina.Presentacion
         private void SalirToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
-            MenuPrincipal s = new MenuPrincipal();
-            this.Close();
-            s.Show();
+       
         }
     }
 }

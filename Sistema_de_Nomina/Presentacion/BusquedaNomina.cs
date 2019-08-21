@@ -18,14 +18,15 @@ namespace Sistema_de_Nomina.Presentacion
             InitializeComponent();
         }
         private DataTable dt;
-        public static int idnomina;
+        public static int idnomina=0;
         public static decimal count_Afp = 0;
         public static decimal count_Seg = 0;
         public static decimal count_SRl = 0;
         public static decimal count_Infotep = 0;
 
         public string fecha;
-        public string NominaNo;
+        public int NominaNo;
+        public int idempleado;
         public string dolar;
         public string Cedula;
         public string Nombre;
@@ -50,6 +51,11 @@ namespace Sistema_de_Nomina.Presentacion
                 dataGridView1.DataSource = dt;
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dataGridView1.MultiSelect = false;
+                b_Imprimir.Visible = false;
+                B_Pago.Visible = false;
+                dataGridView1.Columns["Codigo"].HeaderText = "Nomina";
+
+
             }
             catch (Exception error)
             {
@@ -113,59 +119,61 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentRow != null)
-            {
+            Reportes.TSS t = new Reportes.TSS();
+            t.ShowDialog();
+            //if (dataGridView1.CurrentRow != null)
+            //{
 
 
-                Seguro.Text = "";
-                try
-                {
+            //    Seguro.Text = "";
+            //    try
+            //    {
 
-                    Datos.Nomina n = new Datos.Nomina();
-                    n.IdNomina = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString());
-                    ///                idnomina = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString());
+            //        Datos.Nomina n = new Datos.Nomina();
+            //        n.IdNomina = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString());
+            //        ///                idnomina = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString());
 
-                    DataSet ds = Datos.ProNomina.ReporteTSS();
-                    dt = ds.Tables[0];
-                    dataGridView1.DataSource = dt;
+            //        DataSet ds = Datos.ProNomina.ReporteTSS();
+            //        dt = ds.Tables[0];
+            //        dataGridView1.DataSource = dt;
 
-                    GrupoMostrarNomina.Show();
-                    dataGridView1.Columns["Id"].Visible = false;
+            //        GrupoMostrarNomina.Show();
+            //        dataGridView1.Columns["Id"].Visible = false;
 
-                    b_volver.Enabled = true;
-                    //   B_Salir.Enabled = true;
-                    B_Eliminar.Enabled = false;
-                    B_verNomina.Enabled = false;
-                    foreach (DataGridViewRow row in dataGridView1.Rows)
-                    {
+            //        b_volver.Enabled = true;
+            //        //   B_Salir.Enabled = true;
+            //        B_Eliminar.Enabled = false;
+            //        B_verNomina.Enabled = false;
+            //        foreach (DataGridViewRow row in dataGridView1.Rows)
+            //        {
 
-                        //double total = Convert.ToDouble(row.Cells["Sueldo Neto"].Value) - Convert.ToDouble(row.Cells["Otros"].Value);
-                        //decimal.Round(calculo_isr, 2, MidpointRounding.AwayFromZero);
+            //            //double total = Convert.ToDouble(row.Cells["Sueldo Neto"].Value) - Convert.ToDouble(row.Cells["Otros"].Value);
+            //            //decimal.Round(calculo_isr, 2, MidpointRounding.AwayFromZero);
 
-                        count_Afp += Convert.ToDecimal(row.Cells["AFP"].Value);
-                        count_SRl += Convert.ToDecimal(row.Cells["SRL"].Value);
-                        count_Seg += Convert.ToDecimal(row.Cells["Seguro Familiar de Salud"].Value);
-                        count_Infotep += Convert.ToDecimal(row.Cells["Infotep"].Value);
+            //            count_Afp += Convert.ToDecimal(row.Cells["AFP"].Value);
+            //            count_SRl += Convert.ToDecimal(row.Cells["SRL"].Value);
+            //            count_Seg += Convert.ToDecimal(row.Cells["Seguro Familiar de Salud"].Value);
+            //            count_Infotep += Convert.ToDecimal(row.Cells["Infotep"].Value);
 
-                    }
-                    //Seguro.Text = "Seguro de Salud $$" + count_Seg;
-                    //AFP.Text = "AFP $$" + count_Afp;
-                    //SRL.Text = "Seguro de Riesgos laborales $$" + count_SRl;
-                    //Infotep.Text = " Infotep $$" + count_Infotep;
+            //        }
+            //        //Seguro.Text = "Seguro de Salud $$" + count_Seg;
+            //        //AFP.Text = "AFP $$" + count_Afp;
+            //        //SRL.Text = "Seguro de Riesgos laborales $$" + count_SRl;
+            //        //Infotep.Text = " Infotep $$" + count_Infotep;
 
-                    //  b_volver.Enabled = false;
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show(error.Message + error.StackTrace);
-                }
+            //        //  b_volver.Enabled = false;
+            //    }
+            //    catch (Exception error)
+            //    {
+            //        MessageBox.Show(error.Message + error.StackTrace);
+            //    }
 
-            }
-            else
-            {
-                MessageBox.Show("Por Favor, seleccione una nomina para ver el reporte de pago a la Tss", "Reporte de pago a Tss", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Por Favor, seleccione una nomina para ver el reporte de pago a la Tss", "Reporte de pago a Tss", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
+            //}
 
         }
 
@@ -179,7 +187,7 @@ namespace Sistema_de_Nomina.Presentacion
 
                     n.IdNomina = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString());
                     idnomina = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString());
-
+                    t_iDnOMINA.Text = idnomina.ToString();
                     DataSet ds = Datos.ProNomina.VerNomina(n);
                     dt = ds.Tables[0];
                     dataGridView1.DataSource = dt;
@@ -190,7 +198,8 @@ namespace Sistema_de_Nomina.Presentacion
                     b_volver.Enabled = true;
                     B_verNomina.Enabled = false;
                     B_Eliminar.Enabled = false;
-                    button2.Visible = true;
+                    B_Pago.Visible = true;
+                    b_Imprimir.Visible = true;
                 }
                 catch (Exception error)
                 {
@@ -218,24 +227,6 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                Datos.Nomina n = new Datos.Nomina();
-                n.IdNomina = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString());
-                DataSet ds = Datos.ProNomina.VerNomina(n);
-                dt = ds.Tables[0];
-                dataGridView1.DataSource = dt;
-
-                GrupoMostrarNomina.Show();
-
-                b_volver.Enabled = true;
-                B_verNomina.Enabled = false;
-                B_Eliminar.Enabled = false;
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(error.Message + error.StackTrace);
-            }
 
         }
 
@@ -267,6 +258,12 @@ namespace Sistema_de_Nomina.Presentacion
 
                 L_Fecha.Text = ("Fecha " + ds.Tables[0].Rows[0][0].ToString());
                 L_NoNomina.Text = ("Nomina No. " + ds.Tables[0].Rows[0][1].ToString());
+
+                NominaNo = Convert.ToInt32(ds.Tables[0].Rows[0][1].ToString());
+                idempleado = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value.ToString());
+
+
+
                 L_Dollar.Text = ("Tasa de Cambio " + ds.Tables[0].Rows[0]["dolar"].ToString());
                 L_Cedula.Text = ("Cedula " + ds.Tables[0].Rows[0]["Cedula"].ToString());
                 L_Nombre.Text = ("Nombre :" + ds.Tables[0].Rows[0]["Nombre"].ToString());
@@ -358,6 +355,23 @@ namespace Sistema_de_Nomina.Presentacion
             //L_TotalDescuentos.Text += (" " + ds.Tables[0].Rows[0]["Descuentos"].ToString());
             //L_Neto.Text += (" " + ds.Tables[0].Rows[0]["Sueldo Neto"].ToString());
             //L_Total.Text += (" " + ds.Tables[0].Rows[0]["Salario"].ToString());
+        }
+
+        private void B_Imprimir_Click(object sender, EventArgs e)
+        {
+            Reportes.R23 f = new Reportes.R23();
+            f.GetNomina(Convert.ToInt32(t_iDnOMINA.Text));
+            f.ShowDialog();
+
+        }
+
+        private void B_GenerarNomina_Click(object sender, EventArgs e)
+        {
+            Reportes.ReporteIndividual f = new Reportes.ReporteIndividual();
+            f.getID(NominaNo, idempleado);
+            f.ShowDialog();
+                
+                
         }
     }
 }

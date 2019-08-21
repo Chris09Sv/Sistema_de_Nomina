@@ -21,44 +21,47 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-
-            DataSet ds =Plogin.ValidarLogin (txtUsuario.Text, txtContraseña.Text);
-            DataTable dt = ds.Tables[0];
-            if (dt.Rows.Count > 0)
-            {
-                Login login = new Login();
-                login.Id = Convert.ToInt32(dt.Rows[0]["Id"]);
-                //Usuario.Nombre = dt.Rows[0]["Nombre"].ToString();
-                //Usuario.Apellido = dt.Rows[0]["Apellido"].ToString();
-                //Usuario.Tipo = dt.Rows[0]["Tipo"].ToString();
-                login.Usuario = dt.Rows[0]["Usuario"].ToString();
-                login.Contraseña = dt.Rows[0]["Contraseña"].ToString();
-                // if (Login.Tipo == "Administrador")
-                //  {
-              Panel f1 = new Panel();
-                f1.Show();
-              this.Hide();
-                //  }
-                // else
-                //{
-                //Form2 f = new Form2();
-                // f.Show();
-                // this.Hide();
-
-                // }
+            
 
 
+                DataSet ds = Plogin.ValidarLogin(txtUsuario.Text, txtContraseña.Text);
+                DataTable dt = ds.Tables[0];
+                if (dt.Rows.Count > 0)
+                {
+                    Login login = new Login();
+                    login.Id = Convert.ToInt32(dt.Rows[0]["Id"]);
+                    //Usuario.Nombre = dt.Rows[0]["Nombre"].ToString();
+                    //Usuario.Apellido = dt.Rows[0]["Apellido"].ToString();
+                    //Usuario.Tipo = dt.Rows[0]["Tipo"].ToString();
+                    login.Usuario = dt.Rows[0]["Usuario"].ToString();
+                    login.Contraseña = dt.Rows[0]["Contraseña"].ToString();
+                    // if (Login.Tipo == "Administrador")
+                    //  {
+                    Panel f1 = new Panel();
+                    f1.Show();
+                    this.Hide();
+                    //  }
+                    // else
+                    //{
+                    //Form2 f = new Form2();
+                    // f.Show();
+                    // this.Hide();
+
+                    // }
 
 
-            }
-            else
-            {
-
-                MessageBox.Show("Usuario y/o contraseña incorrecta");
-                txtContraseña.Text = "";
-            }
 
 
+                }
+                else
+                {
+
+                    MessageBox.Show("Usuario y/o contraseña incorrecta");
+                    txtContraseña.Text = "";
+                }
+            
+           
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -68,7 +71,7 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
-         
+          
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -89,11 +92,57 @@ namespace Sistema_de_Nomina.Presentacion
 
 
             }
+            else
+            {
+                if (txtContraseña.PasswordChar == '*')
+                {
+                    txtContraseña.PasswordChar = '\0';
+
+
+                }
+                else
+                {
+
+
+                    txtContraseña.PasswordChar = '*';
+                }
+            }
         }
 
         private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidarCampo.soloLetrasPermitirNumeros(txtContraseña, true, L, errorProvider1, 8);
+          //  ValidarCampo.soloLetrasPermitirNumeros(txtContraseña, true, L, errorProvider1, 8);
+        }
+
+        private void TxtContraseña_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtContraseña.Text))
+            {
+              //  e.Cancel = true;
+                txtContraseña.Focus();
+                errorProvider1.SetError(txtContraseña, "Por favor introduzca la contraseña");
+            }
+            else
+            {
+           //     e.Cancel = false;
+                errorProvider1.SetError(txtContraseña, null);
+            }
+        }
+
+        private void TxtUsuario_Validating(object sender, CancelEventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(txtUsuario.Text))
+            {
+                //e.Cancel = true;
+                txtUsuario.Focus();
+                errorProvider1.SetError(txtUsuario, "Por favor introduzca  el nombre de usuario");
+            }
+            else
+            {
+             //   e.Cancel = false;
+                errorProvider1.SetError(txtUsuario, null);
+            }
         }
     }
 }

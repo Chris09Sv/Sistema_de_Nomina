@@ -75,16 +75,17 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+
+//            errorProvider1.Clear();
+          
             // this.Dispose();
             //Dispose();
         }
 
         private void B_Guardar_Click(object sender, EventArgs e)
         {
-
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
+            
                 if (T_Nombre.Text == "" || T_Apellido.Text == "" || T_Cedula.Text == "" || T_Direccion.Text == "" || T_Telefono.Text == "")
                 {
                     MessageBox.Show("Complete los datos antes de continuar.");
@@ -133,7 +134,7 @@ namespace Sistema_de_Nomina.Presentacion
                     }
 
                 }
-            }
+            
 
 
          
@@ -146,8 +147,8 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewCheckBoxCell checkEliminar = (DataGridViewCheckBoxCell)dataGridView1.Rows[e.RowIndex].Cells["Eliminar"];
-            checkEliminar.Value = !Convert.ToBoolean(checkEliminar.Value);
+            //DataGridViewCheckBoxCell checkEliminar = (DataGridViewCheckBoxCell)dataGridView1.Rows[e.RowIndex].Cells["Eliminar"];
+            //checkEliminar.Value = !Convert.ToBoolean(checkEliminar.Value);
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -350,7 +351,7 @@ namespace Sistema_de_Nomina.Presentacion
         {
             if (string.IsNullOrEmpty(T_Nombre.Text))
             {
-                e.Cancel = true;
+            //    e.Cancel = true;
                 T_Nombre.Focus();
                 errorProvider1.SetError(T_Nombre, "Por favor introduzca el nombre del empleado");
             }
@@ -370,7 +371,7 @@ namespace Sistema_de_Nomina.Presentacion
         {
             if (string.IsNullOrEmpty(T_Cedula.Text))
             {
-                e.Cancel = true;
+            //    e.Cancel = true;
                 T_Cedula.Focus();
                 errorProvider1.SetError(T_Cedula, "Por favor introduzca la cedula del empleado");
             }
@@ -385,9 +386,10 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void T_Cedula_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
+            if (char.IsDigit(e.KeyChar )|| char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
+                OnTabIndexChanged(e);
             }
             else
             {
@@ -447,7 +449,7 @@ namespace Sistema_de_Nomina.Presentacion
         {
             if (string.IsNullOrEmpty(T_Telefono.Text))
             {
-                e.Cancel = true;
+             //   e.Cancel = true;
                 T_Telefono.Focus();
                 errorProvider1.SetError(T_Telefono, "Por favor introduzca el telefono del empleado");
                 L_Telefono.ForeColor = Color.Red;
@@ -455,7 +457,7 @@ namespace Sistema_de_Nomina.Presentacion
             }
             else if (T_Telefono.TextLength > 11 || T_Telefono.TextLength < 11)
             {
-                e.Cancel = true;
+              //  e.Cancel = true;
                 T_Telefono.Focus();
                 errorProvider1.SetError(T_Telefono, "Por favor introduzca un numero de telefono valido");
                 L_Telefono.ForeColor = Color.Red;
@@ -485,7 +487,7 @@ namespace Sistema_de_Nomina.Presentacion
         {
             if (string.IsNullOrEmpty(T_Salario.Text))
             {
-                e.Cancel = true;
+            //    e.Cancel = true;
                 T_Salario.Focus();
                 L_Salario.ForeColor = Color.Red;
 
@@ -504,7 +506,7 @@ namespace Sistema_de_Nomina.Presentacion
         {
             if (string.IsNullOrEmpty(T_Apellido.Text))
             {
-                e.Cancel = true;
+               // e.Cancel = true;
                 T_Apellido.Focus();
                 errorProvider1.SetError(T_Apellido, "Por favor introduzca el apellido del empleado");
                 L_Apellido.ForeColor = Color.Red;
@@ -517,10 +519,10 @@ namespace Sistema_de_Nomina.Presentacion
                 errorProvider1.SetError(T_Apellido, null);
             }
         }
-
+        
         private void T_Apellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidarCampo.soloLetras(T_Apellido, true, L_Apellido, errorProvider1, 50);
+            ValidarCampo.charSoloLetras(T_Apellido,e,  L_Apellido, errorProvider1);
         }
 
         private void T_Correo_Validating(object sender, CancelEventArgs e)
@@ -530,7 +532,7 @@ namespace Sistema_de_Nomina.Presentacion
             if (validarEmail(T_Correo.Text) == false)
             {
                 errorProvider1.SetError(T_Correo, "Correo no valido");
-                e.Cancel = true;
+               // e.Cancel = true;
                 T_Correo.Focus();
                 L_Correo.ForeColor = Color.Red;
                 L_Correo.Text = "Correo no valido";
@@ -672,7 +674,6 @@ namespace Sistema_de_Nomina.Presentacion
         {
             if (string.IsNullOrEmpty(T_Direccion.Text))
             {
-                e.Cancel = true;
                 T_Direccion.Focus();
                 errorProvider1.SetError(T_Apellido, "Por favor introduzca el apellido del empleado");
                 L_Direccion.ForeColor = Color.Red;
@@ -694,8 +695,16 @@ namespace Sistema_de_Nomina.Presentacion
         }
         private void B_Cancelar_Click(object sender, EventArgs e)
         {
+            Empleados_Click(null, null);
+            MantenimientoEmpleado_Load(null, null);
             cancelar();
             Limpiar();
+            errorProvider1.Clear();
+            
+
+
+           
+
 
         }
 
@@ -725,6 +734,31 @@ namespace Sistema_de_Nomina.Presentacion
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            G_Busqueda.Show();
+            G_Empleado.Hide();
+            try
+            {
+                DataSet ds = PEmpleados.VistaInactivos();
+                dt = ds.Tables[0];
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns["Id"].Visible = false;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message + error.StackTrace);
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

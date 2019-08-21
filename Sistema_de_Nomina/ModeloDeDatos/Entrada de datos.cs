@@ -365,14 +365,20 @@ namespace Sistema_de_Nomina.ModeloDeDatos
                             lblError.Text = " Caracteres ingresados: (" + (txt.TextLength + 1) + "/" + charPermitidos + ")";
 
                             //Si la longitud del texto es mayor que la cantidad de caracteres permitidos, y los caracteres permitidos son mayores a 0
-                            if (txt.TextLength + 1 > charPermitidos && charPermitidos > 0)
+                             if (txt.TextLength + 1 == charPermitidos)
+                            {
+                                lblError.Visible = false;
+
+                                lblError.ForeColor = Color.Green;
+                                lblError.Text = "Correcto";
+
+                            }
+                            else if (txt.TextLength + 1 > charPermitidos)
                             {
                                 lblError.ForeColor = Color.Red;
-                                lblError.Text = lblError.Text + ". Estas excediendo el numero de caracteres permitidos";
-                            }
-                            else if (txt.TextLength + 1 == charPermitidos)
-                            {
-                                lblError.ForeColor = Color.Green;
+
+                                lblError.Visible = true;
+                                lblError.Text = " Caracteres ingresados: (" + (txt.TextLength + 1) + "/" + charPermitidos + ")";
 
                             }
                         }

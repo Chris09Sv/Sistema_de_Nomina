@@ -43,8 +43,8 @@
             this.GrupoMostrarNomina = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.B_Pago = new System.Windows.Forms.Button();
+            this.b_Imprimir = new System.Windows.Forms.Button();
             this.Seguro = new System.Windows.Forms.Label();
             this.AFP = new System.Windows.Forms.Label();
             this.SRL = new System.Windows.Forms.Label();
@@ -73,12 +73,13 @@
             this.L_Cedula = new System.Windows.Forms.Label();
             this.B_GenerarNomina = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.L_NoNomina = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.L_Fecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.t_iDnOMINA = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.GrupoMostrarNomina.SuspendLayout();
@@ -94,6 +95,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.t_iDnOMINA);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -250,8 +252,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.B_Pago);
+            this.panel2.Controls.Add(this.b_Imprimir);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(3, 533);
             this.panel2.Name = "panel2";
@@ -259,40 +261,41 @@
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
-            // button2
+            // B_Pago
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(60)))), ((int)(((byte)(136)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(60)))), ((int)(((byte)(136)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(583, 24);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(179, 30);
-            this.button2.TabIndex = 139;
-            this.button2.Text = "Ver Pago de empleado";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.Button2_Click_1);
+            this.B_Pago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(60)))), ((int)(((byte)(136)))));
+            this.B_Pago.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(60)))), ((int)(((byte)(136)))));
+            this.B_Pago.FlatAppearance.BorderSize = 0;
+            this.B_Pago.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet;
+            this.B_Pago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B_Pago.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.B_Pago.ForeColor = System.Drawing.Color.White;
+            this.B_Pago.Location = new System.Drawing.Point(519, 29);
+            this.B_Pago.Name = "B_Pago";
+            this.B_Pago.Size = new System.Drawing.Size(179, 30);
+            this.B_Pago.TabIndex = 139;
+            this.B_Pago.Text = "Ver Pago de empleado";
+            this.B_Pago.UseVisualStyleBackColor = false;
+            this.B_Pago.Visible = false;
+            this.B_Pago.Click += new System.EventHandler(this.Button2_Click_1);
             // 
-            // button1
+            // b_Imprimir
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(60)))), ((int)(((byte)(136)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(60)))), ((int)(((byte)(136)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(351, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 30);
-            this.button1.TabIndex = 138;
-            this.button1.Text = "Imprimir";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
+            this.b_Imprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(60)))), ((int)(((byte)(136)))));
+            this.b_Imprimir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(60)))), ((int)(((byte)(136)))));
+            this.b_Imprimir.FlatAppearance.BorderSize = 0;
+            this.b_Imprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.BlueViolet;
+            this.b_Imprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b_Imprimir.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_Imprimir.ForeColor = System.Drawing.Color.White;
+            this.b_Imprimir.Location = new System.Drawing.Point(287, 29);
+            this.b_Imprimir.Name = "b_Imprimir";
+            this.b_Imprimir.Size = new System.Drawing.Size(179, 30);
+            this.b_Imprimir.TabIndex = 138;
+            this.b_Imprimir.Text = "Imprimir";
+            this.b_Imprimir.UseVisualStyleBackColor = false;
+            this.b_Imprimir.Visible = false;
+            this.b_Imprimir.Click += new System.EventHandler(this.B_Imprimir_Click);
             // 
             // Seguro
             // 
@@ -591,6 +594,7 @@
             this.B_GenerarNomina.TabIndex = 148;
             this.B_GenerarNomina.Text = "Imprimir";
             this.B_GenerarNomina.UseVisualStyleBackColor = false;
+            this.B_GenerarNomina.Click += new System.EventHandler(this.B_GenerarNomina_Click);
             // 
             // panel3
             // 
@@ -606,6 +610,16 @@
             this.panel3.Size = new System.Drawing.Size(1056, 101);
             this.panel3.TabIndex = 152;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(400, 61);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 21);
+            this.label1.TabIndex = 155;
+            this.label1.Text = "Volante de pago de nomina";
+            // 
             // L_NoNomina
             // 
             this.L_NoNomina.AutoSize = true;
@@ -615,6 +629,16 @@
             this.L_NoNomina.Size = new System.Drawing.Size(100, 21);
             this.L_NoNomina.TabIndex = 154;
             this.L_NoNomina.Text = "Nomina No:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(443, 34);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 21);
+            this.label3.TabIndex = 153;
+            this.label3.Text = "Rnc: 130025347";
             // 
             // label2
             // 
@@ -647,25 +671,13 @@
             this.pictureBox1.TabIndex = 151;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
+            // t_iDnOMINA
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(443, 34);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 21);
-            this.label3.TabIndex = 153;
-            this.label3.Text = "Rnc: 130025347";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(400, 61);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 21);
-            this.label1.TabIndex = 155;
-            this.label1.Text = "Volante de pago de nomina";
+            this.t_iDnOMINA.Location = new System.Drawing.Point(45, 43);
+            this.t_iDnOMINA.Name = "t_iDnOMINA";
+            this.t_iDnOMINA.Size = new System.Drawing.Size(100, 20);
+            this.t_iDnOMINA.TabIndex = 156;
+            this.t_iDnOMINA.Visible = false;
             // 
             // BusquedaNomina
             // 
@@ -716,7 +728,7 @@
         private System.Windows.Forms.Button b_volver;
         private System.Windows.Forms.Button B_Eliminar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button b_Imprimir;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -741,7 +753,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button B_Pago;
         private System.Windows.Forms.Label L_Descuentos;
         private System.Windows.Forms.Label L_AFP;
         private System.Windows.Forms.Label L_Seg_Social;
@@ -752,5 +764,6 @@
         private System.Windows.Forms.PictureBox btnsalir;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox t_iDnOMINA;
     }
 }

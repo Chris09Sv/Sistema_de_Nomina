@@ -83,9 +83,7 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            MenuPrincipal m = new MenuPrincipal();
-            m.Show();
-            this.Close();
+           
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

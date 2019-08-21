@@ -39,7 +39,7 @@ namespace Sistema_de_Nomina.Datos
             //}
             //catch (Exception)
             //{
-            //    throw;
+            //    throw;    
             //}
             return ds;
         }

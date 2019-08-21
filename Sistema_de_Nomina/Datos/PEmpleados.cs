@@ -19,6 +19,14 @@ namespace Sistema_de_Nomina.Datos
             };
             return Conexiones.ExecuteDataSet("store_Vista_Empleado", dbparams);
         }
+        public static DataSet VistaInactivos()
+        {
+            SqlParameter[] dbparams = new SqlParameter[]
+            {
+
+            };
+            return Conexiones.ExecuteDataSet("store_Vista_Empleado_NoActivos", dbparams);
+        }
         public static DataSet VistaNominaIndividual(Empleados empleado)
         {
             SqlParameter[] dbparams = new SqlParameter[]

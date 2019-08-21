@@ -252,7 +252,7 @@ namespace Sistema_de_Nomina.Presentacion
                     n.Fecha1 = DateTime.Today;
                     n.Fecha2 = DTP_FechaNomina.Value;
                 };
-                    if (ultima_nomina <=25)
+                    if (ultima_nomina ==25)
                     {
                         MessageBox.Show("La ultima nomina fue registrada hace: " + ultima_nomina + "dias");
 
@@ -317,9 +317,8 @@ namespace Sistema_de_Nomina.Presentacion
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            MenuPrincipal m = new MenuPrincipal();
-            m.Show();
-        }
+            //.MenuPrincipal m = new MenuPrincipal();
+                    }
 
         private void Button2_Click(object sender, EventArgs e)
         {

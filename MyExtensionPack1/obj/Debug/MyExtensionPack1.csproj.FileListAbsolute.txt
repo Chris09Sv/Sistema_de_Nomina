@@ -1,0 +1,11 @@
+C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\MyExtensionPack1\bin\Debug\MyExtensionPack1.vsix
+C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\MyExtensionPack1\bin\Debug\extension.vsixmanifest
+C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\MyExtensionPack1\obj\Debug\MyExtensionPack1.csprojAssemblyReference.cache
+C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\MyExtensionPack1\obj\Debug\_EmptyResource.resources
+C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\MyExtensionPack1\obj\Debug\MyExtensionPack1.csproj.GenerateResource.cache
+C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\MyExtensionPack1\obj\Debug\MyExtensionPack1.csproj.CoreCompileInputs.cache
+C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\MyExtensionPack1\obj\Debug\MyExtensionPack1.dll
+C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\MyExtensionPack1\obj\Debug\MyExtensionPack1.pdb
+C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\MyExtensionPack1\obj\Debug\extension.vsixmanifest
+C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\MyExtensionPack1\obj\Debug\files.json
+C:\Users\Cristopher Solano\Documents\Sistema_de_Nomina\MyExtensionPack1\obj\Debug\createTemplateManifests.cache

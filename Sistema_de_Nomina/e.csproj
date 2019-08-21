@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{918CBD09-E69F-483F-9C23-FC15B76CEE74}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sistema_de_Nomina</RootNamespace>
+    <AssemblyName>Sistema_de_Nomina</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\cr_wSf_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSets\Reportes.cs">
+      <DependentUpon>Reportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Reportes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Conexiones.cs" />
+    <Compile Include="Datos\Deducciones.cs" />
+    <Compile Include="Datos\DUsuario.cs" />
+    <Compile Include="Datos\Plogin.cs" />
+    <Compile Include="Datos\PrPrestamos_Y_Bonificaciones.cs" />
+    <Compile Include="ModeloDeDatos\Entrada de datos.cs" />
+    <Compile Include="ModeloDeDatos\Login.cs" />
+    <Compile Include="ModeloDeDatos\Ndeducciones.cs" />
+    <Compile Include="ModeloDeDatos\Nomina.cs" />
+    <Compile Include="Datos\PEmpleados.cs" />
+    <Compile Include="Datos\ProDepartamento.cs" />
+    <Compile Include="Datos\ProNomina.cs" />
+    <Compile Include="ModeloDeDatos\Departamentos.cs" />
+    <Compile Include="ModeloDeDatos\Posiciones.cs" />
+    <Compile Include="ModeloDeDatos\Prestamos_y_Bonificaciones.cs" />
+    <Compile Include="Presentacion\BusquedaNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\BusquedaNomina.Designer.cs">
+      <DependentUpon>BusquedaNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CalculoPrestaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CalculoPrestaciones.designer.cs">
+      <DependentUpon>CalculoPrestaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Cuentas por cobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Cuentas por cobrar.Designer.cs">
+      <DependentUpon>Cuentas por cobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\DescuentosPorLey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\DescuentosPorLey.Designer.cs">
+      <DependentUpon>DescuentosPorLey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloDeDatos\Empleados.cs" />
+    <Compile Include="Presentacion\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmpro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmpro.designer.cs">
+      <DependentUpon>frmpro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Log\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Log\Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Log\Frm_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Log\Frm_Usuario.Designer.cs">
+      <DependentUpon>Frm_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Mantenimiento de  nomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Mantenimiento de  nomina.Designer.cs">
+      <DependentUpon>Mantenimiento de  nomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoDepartamento.Designer.cs">
+      <DependentUpon>MantenimientoDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoEmpleado.Designer.cs">
+      <DependentUpon>MantenimientoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoOtros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MantenimientoOtros.Designer.cs">
+      <DependentUpon>MantenimientoOtros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Nomina13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Nomina13.Designer.cs">
+      <DependentUpon>Nomina13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\NominaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\NominaEmpleado.Designer.cs">
+      <DependentUpon>NominaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ContenedorDeNominas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ContenedorDeNominas.Designer.cs">
+      <DependentUpon>ContenedorDeNominas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PrestamosyBonificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PrestamosyBonificaciones.Designer.cs">
+      <DependentUpon>PrestamosyBonificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\InformeDePago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\InformeDePago.Designer.cs">
+      <DependentUpon>InformeDePago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\R23.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\R23.Designer.cs">
+      <DependentUpon>R23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ReporteIndividual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ReporteIndividual.Designer.cs">
+      <DependentUpon>ReporteIndividual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\TSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\TSS.Designer.cs">
+      <DependentUpon>TSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Tasa de Deducciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Tasa de Deducciones.Designer.cs">
+      <DependentUpon>Tasa de Deducciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Vista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Vista.Designer.cs">
+      <DependentUpon>Vista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Presentacion\BusquedaNomina.resx">
+      <DependentUpon>BusquedaNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CalculoPrestaciones.resx">
+      <DependentUpon>CalculoPrestaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Cuentas por cobrar.resx">
+      <DependentUpon>Cuentas por cobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\DescuentosPorLey.resx">
+      <DependentUpon>DescuentosPorLey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmpro.resx">
+      <DependentUpon>frmpro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Log\Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Log\Frm_Usuario.resx">
+      <DependentUpon>Frm_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Mantenimiento de  nomina.resx">
+      <DependentUpon>Mantenimiento de  nomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MantenimientoDepartamento.resx">
+      <DependentUpon>MantenimientoDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MantenimientoEmpleado.resx">
+      <DependentUpon>MantenimientoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MantenimientoOtros.resx">
+      <DependentUpon>MantenimientoOtros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Nomina13.resx">
+      <DependentUpon>Nomina13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\NominaEmpleado.resx">
+      <DependentUpon>NominaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ContenedorDeNominas.resx">
+      <DependentUpon>ContenedorDeNominas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PrestamosyBonificaciones.resx">
+      <DependentUpon>PrestamosyBonificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\DetalleDeNomina.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\InformeDePago.resx">
+      <DependentUpon>InformeDePago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\R23.resx">
+      <DependentUpon>R23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\ReporteAPagar.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\ReporteIndividual.resx">
+      <DependentUpon>ReporteIndividual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\ReporteNomina1.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\ReporteP.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\RTSS.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\TSS.resx">
+      <DependentUpon>TSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Tasa de Deducciones.resx">
+      <DependentUpon>Tasa de Deducciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Vista.resx">
+      <DependentUpon>Vista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DataSets\Reportes.xsc">
+      <DependentUpon>Reportes.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Reportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Reportes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Reportes.xss">
+      <DependentUpon>Reportes.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-coin-3-240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-coin-3-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-coin-3-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-coin-3-48 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-banknote-11-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-time-17-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-user-20-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-gear-11-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-arrow-76-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-arrow-76-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-coin-3-48 %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cr_wSf_icon.ico" />
+    <None Include="Resources\Icon1.ico" />
+    <None Include="Resources\cr_wSf_icon.ico" />
+    <Content Include="SistemaDeNomina.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SistemaDeNomina_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>SistemaDeNomina.mdf</DependentUpon>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

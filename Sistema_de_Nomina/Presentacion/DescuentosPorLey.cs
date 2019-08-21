@@ -54,7 +54,7 @@ namespace Sistema_de_Nomina.Presentacion
 
         private void fToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirHijo(new MenuPrincipal());
+          //  AbrirHijo(new MenuPrincipal());
 
         }
     }

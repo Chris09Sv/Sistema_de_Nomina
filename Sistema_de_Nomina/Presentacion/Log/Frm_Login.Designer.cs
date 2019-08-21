@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.L = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.L = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,10 +66,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ACCEDER";
             // 
+            // L
+            // 
+            this.L.AutoSize = true;
+            this.L.Location = new System.Drawing.Point(116, 96);
+            this.L.Name = "L";
+            this.L.Size = new System.Drawing.Size(0, 16);
+            this.L.TabIndex = 6;
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(228, 73);
+            this.checkBox1.Location = new System.Drawing.Point(239, 66);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(79, 20);
             this.checkBox1.TabIndex = 5;
@@ -113,6 +121,7 @@
             this.txtContraseña.TabIndex = 2;
             this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
+            this.txtContraseña.Validating += new System.ComponentModel.CancelEventHandler(this.TxtContraseña_Validating);
             // 
             // txtUsuario
             // 
@@ -120,6 +129,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 22);
             this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.TxtUsuario_Validating);
             // 
             // label2
             // 
@@ -148,14 +158,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(197, 185);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // L
-            // 
-            this.L.AutoSize = true;
-            this.L.Location = new System.Drawing.Point(116, 96);
-            this.L.Name = "L";
-            this.L.Size = new System.Drawing.Size(0, 16);
-            this.L.TabIndex = 6;
             // 
             // errorProvider1
             // 
